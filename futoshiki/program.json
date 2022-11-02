@@ -1,0 +1,10 @@
+{
+    "program": "futoshiki.aleo",
+    "version": "0.0.0",
+    "description": "",
+    "development": {
+        "private_key": "APrivateKey1zkp9NR8a4bcfHQg9V2XXUBmgryu4FGz2ym8KsfcnRsMHpkx",
+        "address": "aleo1gddglkg34zjkrkt6zt8yz4e5r65qgc8s397w9x72qtu30l80usyscpjds8"
+    },
+    "license": "MIT"
+}

@@ -1,0 +1,10 @@
+{
+    "program": "skyscrapers.aleo",
+    "version": "0.0.0",
+    "description": "",
+    "development": {
+        "private_key": "APrivateKey1zkpCLvebuGeTWvWZocHjjNuBS9YDqBAM4J1MtGEErSjBauH",
+        "address": "aleo1dq49c8varckzg5tn7yk8ves3vl8kljy2c9cuglj9g8y2pn9mkqpshyryve"
+    },
+    "license": "MIT"
+}
