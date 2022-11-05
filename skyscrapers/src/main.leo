@@ -158,7 +158,33 @@ program skyscrapers.aleo {
         
     }
 
-    
+    // Check if every row in solved board has the numbers 1 to 5.
+    // For each element in the row, check if it is not equal to any other element in the row.
+    // 50 = (1+2+3+4) * 5 (Components )
+
+     
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Check if each column in solved has the numbers 1-5
+    // For each element in the column, check if it is equal to the sum of the other elements in the column
+    // 50 = ()
+
+
 
 
 
