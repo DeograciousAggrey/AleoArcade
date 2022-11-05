@@ -70,6 +70,35 @@ program skyscrapers.aleo {
 
             }
         
+    // Returns the number of visible skyscrapers from the left of the board.
+    transition left_visible(board: Board) -> u8 {
+        let mut visible: u8 = 0u8;
+        let mut max: u8 = 0u8;
+        for i in 0..5 {
+            let row: Row = board.r1;
+            let value: u8 = row.c1;
+            if value > max {
+                visible += 1u8;
+                max = value;
+            }
+        }
+        return visible;
+    }
+
+    // Returns the number of visible skyscrapers from the right of the board.
+    transition right_visible(board: Board) -> u8 {
+        let mut visible: u8 = 0u8;
+        let mut max: u8 = 0u8;
+        for i in 0..5 {
+            let row: Row = board.r1;
+            let value: u8 = row.c1;
+            if value > max {
+                visible += 1u8;
+                max = value;
+            }
+        }
+        return visible;
+    }
     
 
 
