@@ -212,7 +212,9 @@ program skyscrapers.aleo {
     // Check Skyscrapers amount 
     
 
+    // Check the left skyscrapers amount(From left to right). 
     //
+
 
 
      
