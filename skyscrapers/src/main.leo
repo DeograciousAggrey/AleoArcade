@@ -99,6 +99,45 @@ program skyscrapers.aleo {
         }
         return visible;
     }
+
+    // Returns the number of visible skyscrapers from the top of the board.
+    transition top_visible(board: Board) -> u8 {
+        let mut visible: u8 = 0u8;
+        let mut max: u8 = 0u8;
+        for i in 0..5 {
+            let row: Row = board.r1;
+            let value: u8 = row.c1;
+            if value > max {
+                visible += 1u8;
+                max = value;
+            }
+        }
+        return visible;
+    }
+
+    // Returns the number of visible skyscrapers from the bottom of the board.
+    transition bottom_visible(board: Board) -> u8 {
+        let mut visible: u8 = 0u8;
+        let mut max: u8 = 0u8;
+        for i in 0..5 {
+            let row: Row = board.r1;
+            let value: u8 = row.c1;
+            if value > max {
+                visible += 1u8;
+                max = value;
+            }
+        }
+        return visible;
+    }
+
+    // Check for a win
+    // Returns "true" for the following board: 
+    // The object is to place a skyscraper in each cell, with a height between 1 and 5 inclusive, 
+    // so that no two skyscrapers in a row or column have the same height.
+    // In addition, the number of visible skyscrapers from the left, right, top, and bottom must match the clues given in the input.
+    // higher skyscrapers block the view of lower skyscrapers located behind them.
+    
+    
     
 
 
