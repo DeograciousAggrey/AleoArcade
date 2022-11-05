@@ -160,7 +160,60 @@ program skyscrapers.aleo {
 
     // Check if every row in solved board has the numbers 1 to 5.
     // For each element in the row, check if it is not equal to any other element in the row.
-    // 50 = (1+2+3+4) * 5 (Components )
+    // there are 50 comparisons in total.
+    function check_rows(board: Board) -> bool {
+        return 
+            (board.r1.c1 != board.r1.c2 && board.r1.c1 != board.r1.c3 && board.r1.c1 != board.r1.c4 && board.r1.c1 != board.r1.c5 &&
+            board.r1.c2 != board.r1.c3 && board.r1.c2 != board.r1.c4 && board.r1.c2 != board.r1.c5 &&
+            board.r1.c3 != board.r1.c4 && board.r1.c3 != board.r1.c5 &&
+            board.r1.c4 != board.r1.c5 &&
+            board.r2.c1 != board.r2.c2 && board.r2.c1 != board.r2.c3 && board.r2.c1 != board.r2.c4 && board.r2.c1 != board.r2.c5 &&
+            board.r2.c2 != board.r2.c3 && board.r2.c2 != board.r2.c4 && board.r2.c2 != board.r2.c5 &&
+            board.r2.c3 != board.r2.c4 && board.r2.c3 != board.r2.c5 &&
+            board.r2.c4 != board.r2.c5 &&
+            board.r3.c1 != board.r3.c2 && board.r3.c1 != board.r3.c3 && board.r3.c1 != board.r3.c4 && board.r3.c1 != board.r3.c5 &&
+            board.r3.c2 != board.r3.c3 && board.r3.c2 != board.r3.c4 && board.r3.c2 != board.r3.c5 &&
+            board.r3.c3 != board.r3.c4 && board.r3.c3 != board.r3.c5 &&
+            board.r3.c4 != board.r3.c5 &&
+            board.r4.c1 != board.r4.c2 && board.r4.c1 != board.r4.c3 && board.r4.c1 != board.r4.c4 && board.r4.c1 != board.r4.c5 &&
+            board.r4.c2 != board.r4.c3 && board.r4.c2 != board.r4.c4 && board.r4.c2 != board.r4.c5 &&
+            board.r4.c3 != board.r4.c4 && board.r4.c3 != board.r4.c5 && board.r4.c4 != board.r4.c5 &&
+            board.r5.c1 != board.r5.c2 && board.r5.c1 != board.r5.c3 && board.r5.c1 != board.r5.c4 && board.r5.c1 != board.r5.c5 &&
+            board.r5.c2 != board.r5.c3 && board.r5.c2 != board.r5.c4 && board.r5.c2 != board.r5.c5 &&
+            board.r5.c3 != board.r5.c4 && board.r5.c3 != board.r5.c5 && board.r5.c4 != board.r5.c5);
+    }
+
+
+    // Check if every column in solved board has the numbers 1 to 5.
+    // For each element in the column, check if it is not equal to any other element in the column.
+    // there are 50 comparisons in total.
+    function check_columns(board: Board) -> bool {
+        return 
+            (board.r1.c1 != board.r2.c1 && board.r1.c1 != board.r3.c1 && board.r1.c1 != board.r4.c1 && board.r1.c1 != board.r5.c1 &&
+            board.r2.c1 != board.r3.c1 && board.r2.c1 != board.r4.c1 && board.r2.c1 != board.r5.c1 &&
+            board.r3.c1 != board.r4.c1 && board.r3.c1 != board.r5.c1 &&
+            board.r4.c1 != board.r5.c1 &&
+            board.r1.c2 != board.r2.c2 && board.r1.c2 != board.r3.c2 && board.r1.c2 != board.r4.c2 && board.r1.c2 != board.r5.c2 &&
+            board.r2.c2 != board.r3.c2 && board.r2.c2 != board.r4.c2 && board.r2.c2 != board.r5.c2 &&
+            board.r3.c2 != board.r4.c2 && board.r3.c2 != board.r5.c2 &&
+            board.r4.c2 != board.r5.c2 &&
+            board.r1.c3 != board.r2.c3 && board.r1.c3 != board.r3.c3 && board.r1.c3 != board.r4.c3 && board.r1.c3 != board.r5.c3 &&
+            board.r2.c3 != board.r3.c3 && board.r2.c3 != board.r4.c3 && board.r2.c3 != board.r5.c3 &&
+            board.r3.c3 != board.r4.c3 && board.r3.c3 != board.r5.c3 &&
+            board.r4.c3 != board.r5.c3 &&
+            board.r1.c4 != board.r2.c4 && board.r1.c4 != board.r3.c4 && board.r1.c4 != board.r4.c4 && board.r1.c4 != board.r5.c4 &&
+            board.r2.c4 != board.r3.c4 && board.r2.c4 != board.r4.c4 && board.r2.c4 != board.r5.c4 &&
+            board.r3.c4 != board.r4.c4 && board.r3.c4 != board.r5.c4 && board.r4.c4 != board.r5.c4 &&
+            board.r1.c5 != board.r2.c5 && board.r1.c5 != board.r3.c5 && board.r1.c5 != board.r4.c5 && board.r1.c5 != board.r5.c5 &&
+            board.r2.c5 != board.r3.c5 && board.r2.c5 != board.r4.c5 && board.r2.c5 != board.r5.c5 &&
+            board.r3.c5 != board.r4.c5 && board.r3.c5 != board.r5.c5 && board.r4.c5 != board.r5.c5);
+    }
+
+    // Check Skyscrapers amount 
+    
+
+    //
+
 
      
 
@@ -174,15 +227,6 @@ program skyscrapers.aleo {
 
 
 
-
-
-
-
-
-
-    //Check if each column in solved has the numbers 1-5
-    // For each element in the column, check if it is equal to the sum of the other elements in the column
-    // 50 = ()
 
 
 
