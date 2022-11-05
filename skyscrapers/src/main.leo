@@ -81,7 +81,7 @@ program skyscrapers.aleo {
         };  
     }
 
-    // List of Skyscrapers amounts in the order: left, right, top, bottom.(Rows then columns and if there is no clue, the amount is 0)
+    // List of Skyscrapers clue amounts in the order: left, right, top, bottom.(Rows then columns and if there is no clue, the amount is 0)
     // - `l1` : The first amount in the list.
     // - `l2` : The second amount in the list.
     // - `l3` : The third amount in the list.
@@ -103,26 +103,26 @@ program skyscrapers.aleo {
     // - `l19` : The nineteenth amount in the list.
     // - `l20` : The twentieth amount in the list.
     struct Clues {
-        l1: u8,
-        l2: u8,
-        l3: u8,
-        l4: u8,
-        l5: u8,
-        l6: u8,
-        l7: u8,
-        l8: u8,
-        l9: u8,
-        l10: u8,
-        l11: u8,
-        l12: u8,
-        l13: u8,
-        l14: u8,
-        l15: u8,
-        l16: u8,
-        l17: u8,
-        l18: u8,
-        l19: u8,
-        l20: u8,
+        l1: 2u8,
+        l2: 2u8,
+        l3: 3u8,
+        l4: 4u8,
+        l5: 1u8,
+        l6: 2u8,
+        l7: 3u8,
+        l8: 1u8,    
+        l9: 2u8,
+        l10: 3u8,
+        l11: 3u8,
+        l12: 2u8,
+        l13: 1u8,
+        l14: 3u8,
+        l15: 2u8,
+        l16: 1u8,
+        l17: 4u8,
+        l18: 3u8,
+        l19: 2u8,
+        l20: 2u8,
     }
 
     // Check if the values of solved skyscrapers are >= 1 and <= 5.
