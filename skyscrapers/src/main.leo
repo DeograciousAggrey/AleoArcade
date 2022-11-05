@@ -70,90 +70,95 @@ program skyscrapers.aleo {
 
             }
         
-    // Returns the number of visible skyscrapers from the left of the board.
-    transition left_visible(board: Board) -> u8 {
-        let mut visible: u8 = 0u8;
-        let mut max: u8 = 0u8;
-        for i in 0..5 {
-            let row: Row = board.r1;
-            let value: u8 = row.c1;
-            if value > max {
-                visible += 1u8;
-                max = value;
-            }
-        }
-        return visible;
+    // Returns a solved board.
+    transition solved_board() -> Board {
+        return Board {
+            r1: Row{ c1: 1u8, c2: 2u8, c3: 4u8, c4: 5u8, c5: 3u8 },
+            r2: Row{ c1: 2u8, c2: 3u8, c3: 1u8, c4: 4u8, c5: 5u8 },
+            r3: Row{c1: 5u8, c2: 4u8, c3: 3u8, c4: 2u8, c5: 1u8 },
+            r4: Row{ c1: 3u8, c2: 5u8, c3: 2u8, c4: 1u8, c5: 4u8 },
+            r5: Row{ c1: 4u8, c2: 1u8, c3: 5u8, c4: 3u8, c5: 2u8 },
+        };  
     }
 
-    // Returns the number of visible skyscrapers from the right of the board.
-    transition right_visible(board: Board) -> u8 {
-        let mut visible: u8 = 0u8;
-        let mut max: u8 = 0u8;
-        for i in 0..5 {
-            let row: Row = board.r1;
-            let value: u8 = row.c1;
-            if value > max {
-                visible += 1u8;
-                max = value;
-            }
-        }
-        return visible;
+    // List of Skyscrapers amounts in the order: left, right, top, bottom.(Rows then columns and if there is no clue, the amount is 0)
+    // - `l1` : The first amount in the list.
+    // - `l2` : The second amount in the list.
+    // - `l3` : The third amount in the list.
+    // - `l4` : The fourth amount in the list.
+    // - `l5` : The fifth amount in the list.
+    // - `l6` : The sixth amount in the list.
+    // - `l7` : The seventh amount in the list.
+    // - `l8` : The eighth amount in the list.
+    // - `l9` : The ninth amount in the list.
+    // - `l10` : The tenth amount in the list.
+    // - `l11` : The eleventh amount in the list.
+    // - `l12` : The twelfth amount in the list.
+    // - `l13` : The thirteenth amount in the list.
+    // - `l14` : The fourteenth amount in the list.
+    // - `l15` : The fifteenth amount in the list.
+    // - `l16` : The sixteenth amount in the list.
+    // - `l17` : The seventeenth amount in the list.
+    // - `l18` : The eighteenth amount in the list.
+    // - `l19` : The nineteenth amount in the list.
+    // - `l20` : The twentieth amount in the list.
+    struct Clues {
+        l1: u8,
+        l2: u8,
+        l3: u8,
+        l4: u8,
+        l5: u8,
+        l6: u8,
+        l7: u8,
+        l8: u8,
+        l9: u8,
+        l10: u8,
+        l11: u8,
+        l12: u8,
+        l13: u8,
+        l14: u8,
+        l15: u8,
+        l16: u8,
+        l17: u8,
+        l18: u8,
+        l19: u8,
+        l20: u8,
     }
 
-    // Returns the number of visible skyscrapers from the top of the board.
-    transition top_visible(board: Board) -> u8 {
-        let mut visible: u8 = 0u8;
-        let mut max: u8 = 0u8;
-        for i in 0..5 {
-            let row: Row = board.r1;
-            let value: u8 = row.c1;
-            if value > max {
-                visible += 1u8;
-                max = value;
-            }
-        }
-        return visible;
+    // Check if the values of solved skyscrapers are >= 1 and <= 5.
+
+    function check_values(board: Board) -> bool {
+        return 
+           ( board.r1.c1 >= 1u8 && board.r1.c1 <= 5u8 &&
+            board.r1.c2 >= 1u8 && board.r1.c2 <= 5u8 &&
+            board.r1.c3 >= 1u8 && board.r1.c3 <= 5u8 &&
+            board.r1.c4 >= 1u8 && board.r1.c4 <= 5u8 &&
+            board.r1.c5 >= 1u8 && board.r1.c5 <= 5u8 &&
+            board.r2.c1 >= 1u8 && board.r2.c1 <= 5u8 &&
+            board.r2.c2 >= 1u8 && board.r2.c2 <= 5u8 &&
+            board.r2.c3 >= 1u8 && board.r2.c3 <= 5u8 &&
+            board.r2.c4 >= 1u8 && board.r2.c4 <= 5u8 &&
+            board.r2.c5 >= 1u8 && board.r2.c5 <= 5u8 &&
+            board.r3.c1 >= 1u8 && board.r3.c1 <= 5u8 &&
+            board.r3.c2 >= 1u8 && board.r3.c2 <= 5u8 &&
+            board.r3.c3 >= 1u8 && board.r3.c3 <= 5u8 &&
+            board.r3.c4 >= 1u8 && board.r3.c4 <= 5u8 &&
+            board.r3.c5 >= 1u8 && board.r3.c5 <= 5u8 &&
+            board.r4.c1 >= 1u8 && board.r4.c1 <= 5u8 &&
+            board.r4.c2 >= 1u8 && board.r4.c2 <= 5u8 &&
+            board.r4.c3 >= 1u8 && board.r4.c3 <= 5u8 &&
+            board.r4.c4 >= 1u8 && board.r4.c4 <= 5u8 &&
+            board.r4.c5 >= 1u8 && board.r4.c5 <= 5u8 &&
+            board.r5.c1 >= 1u8 && board.r5.c1 <= 5u8 &&
+            board.r5.c2 >= 1u8 && board.r5.c2 <= 5u8 &&
+            board.r5.c3 >= 1u8 && board.r5.c3 <= 5u8 &&
+            board.r5.c4 >= 1u8 && board.r5.c4 <= 5u8 &&
+            board.r5.c5 >= 1u8 && board.r5.c5 <= 5u8 );
+
+        
     }
 
-    // Returns the number of visible skyscrapers from the bottom of the board.
-    transition bottom_visible(board: Board) -> u8 {
-        let mut visible: u8 = 0u8;
-        let mut max: u8 = 0u8;
-        for i in 0..5 {
-            let row: Row = board.r1;
-            let value: u8 = row.c1;
-            if value > max {
-                visible += 1u8;
-                max = value;
-            }
-        }
-        return visible;
-    }
-
-    // Check for a win
-    // Returns "true" for the following board: 
-    // The object is to place a skyscraper in each cell, with a height between 1 and 5 inclusive, 
-    // so that no two skyscrapers in a row or column have the same height.
-    // In addition, the number of visible skyscrapers from the left, right, top, and bottom must match the clues given in the input.
-    // higher skyscrapers block the view of lower skyscrapers located behind them.
     
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
