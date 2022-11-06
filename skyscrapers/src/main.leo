@@ -73,11 +73,11 @@ program skyscrapers.aleo {
     // Returns a solved board.
     transition solved_board() -> Board {
         return Board {
-            r1: Row{ c1: u8, c2: u8, c3: u8, c4: u8, c5: u8 },
-            r2: Row{ c1: u8, c2: u8, c3: u8, c4: u8, c5: u8 },
-            r3: Row{c1: u8, c2: u8, c3: u8, c4: u8, c5: u8 },
-            r4: Row{ c1: u8, c2: u8, c3: u8, c4: u8, c5: u8 },
-            r5: Row{ c1: u8, c2: u8, c3: u8, c4: u8, c5: u8 },
+            r1: Row{ c1: 1u8, c2: 2u8, c3: 4u8, c4: 5u8, c5: 3u8 },
+            r2: Row{ c1: 2u8, c2: 3u8, c3: 1u8, c4: 4u8, c5: 5u8 },
+            r3: Row{c1: 5u8, c2: 4u8, c3: 3u8, c4: 2u8, c5: 1u8 },
+            r4: Row{ c1: 3u8, c2: 5u8, c3: 2u8, c4: 1u8, c5: 4u8 },
+            r5: Row{ c1: 4u8, c2: 1u8, c3: 5u8, c4: 3u8, c5: 2u8 },
         };  
     }
 
@@ -355,7 +355,7 @@ program skyscrapers.aleo {
             clues.l20 == 5u8);
     }
 
-
+    
 
 
 
