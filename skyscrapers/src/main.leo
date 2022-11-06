@@ -355,7 +355,99 @@ program skyscrapers.aleo {
             clues.l20 == 5u8);
     }
 
-    
+    //Transition function to play the game
+    //It returns an updated board with clues
+    // When a player inputs a number into any cell, the checks are performed to see if the number is valid.
+    // If the number is valid, the board is updated with the number.
+    // If the number is not valid, the board is not updated.
+    // Check if all the rows and columns are are filled with numbers.
+    // If all the rows and columns are filled with numbers, check if the clues left to right, right to left, top to bottom, bottom to top are satisfied.
+    // If all the clues are satisfied, the game is won.
+    // If all the clues are not satisfied, the game is not won.
+    transition play(board: Board, clues: Clues, row: u8, col: u8) -> (Board, Clues, u8) {
+        //Check that the inputs are valid
+        console.assert(row >= 1u8 && row <= 5u8);
+        console.assert(col >= 1u8 && col <= 5u8);
+
+        //Unpack the entries in the board into variables
+        let r1c1: u8 = board.r1.c1;
+        let r1c2: u8 = board.r1.c2;
+        let r1c3: u8 = board.r1.c3;
+        let r1c4: u8 = board.r1.c4;
+        let r1c5: u8 = board.r1.c5;
+        let r2c1: u8 = board.r2.c1;
+        let r2c2: u8 = board.r2.c2;
+        let r2c3: u8 = board.r2.c3;
+        let r2c4: u8 = board.r2.c4;
+        let r2c5: u8 = board.r2.c5;
+        let r3c1: u8 = board.r3.c1;
+        let r3c2: u8 = board.r3.c2;
+        let r3c3: u8 = board.r3.c3;
+        let r3c4: u8 = board.r3.c4;
+        let r3c5: u8 = board.r3.c5;
+        let r4c1: u8 = board.r4.c1;
+        let r4c2: u8 = board.r4.c2;
+        let r4c3: u8 = board.r4.c3;
+        let r4c4: u8 = board.r4.c4;
+        let r4c5: u8 = board.r4.c5;
+        let r5c1: u8 = board.r5.c1;
+        let r5c2: u8 = board.r5.c2;
+        let r5c3: u8 = board.r5.c3;
+        let r5c4: u8 = board.r5.c4;
+        let r5c5: u8 = board.r5.c5;
+
+        //Unpack the entries in the clues into variables
+        let l1: u8 = 2u8;
+        let l2: u8 = 2u8;
+        let l3: u8 = 3u8;
+        let l4: u8 = 4u8;
+        let l5: u8 = 1u8;
+        let l6: u8 = 2u8;
+        let l7: u8 = 3u8;
+        let l8: u8 = 1u8;
+        let l9: u8 = 2u8;
+        let l10: u8 = 3u8;
+        let l11: u8 = 3u8;
+        let l12: u8 = 2u8;
+        let l13: u8 = 1u8;
+        let l14: u8 = 3u8;  
+        let l15: u8 = 2u8;
+        let l16: u8 = 1u8;
+        let l17: u8 = 4u8;
+        let l18: u8 = 3u8;
+        let l19: u8 = 2u8;
+        let l20: u8 = 2u8;
+        
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+        //Update the board with the number entered by the player
+        //If the number is valid, the board is updated with the number
+        //If the number is not valid, the board is not updated
+        let new_board: Board = board {
+            
+        
+
+
+
+        
 
 
 
