@@ -254,6 +254,35 @@ program skyscrapers.aleo {
     // How many values are bigger than the highest value in the row from the right to left from column 1 to 5.
     //If the amount of skyscrapers that can be seen from the right is equal to the clue, return true.
     // If the amount of skyscrapers that can be seen from the right is not equal to the clue, return false.
+    function check_right_skyscrapers(board: Board, clues: Clues) -> bool {
+        return 
+            (board.r1.c5 > board.r1.c4 && board.r1.c5 > board.r1.c3 && board.r1.c5 > board.r1.c2 && board.r1.c5 > board.r1.c1 && clues.l6 == 1u8 ||
+            board.r1.c5 > board.r1.c4 && board.r1.c5 > board.r1.c3 && board.r1.c5 > board.r1.c2 && clues.l6 == 2u8 ||
+            board.r1.c5 > board.r1.c4 && board.r1.c5 > board.r1.c3 && clues.l6 == 3u8 ||
+            board.r1.c5 > board.r1.c4 && clues.l6 == 4u8 ||
+            clues.l6 == 5u8) &&
+            (board.r2.c5 > board.r2.c4 && board.r2.c5 > board.r2.c3 && board.r2.c5 > board.r2.c2 && board.r2.c5 > board.r2.c1 && clues.l7 == 1u8 ||
+            board.r2.c5 > board.r2.c4 && board.r2.c5 > board.r2.c3 && board.r2.c5 > board.r2.c2 && clues.l7 == 2u8 ||
+            board.r2.c5 > board.r2.c4 && board.r2.c5 > board.r2.c3 && clues.l7 == 3u8 ||
+            board.r2.c5 > board.r2.c4 && clues.l7 == 4u8 ||
+            clues.l7 == 5u8) &&
+            (board.r3.c5 > board.r3.c4 && board.r3.c5 > board.r3.c3 && board.r3.c5 > board.r3.c2 && board.r3.c5 > board.r3.c1 && clues.l8 == 1u8 ||
+            board.r3.c5 > board.r3.c4 && board.r3.c5 > board.r3.c3 && board.r3.c5 > board.r3.c2 && clues.l8 == 2u8 ||
+            board.r3.c5 > board.r3.c4 && board.r3.c5 > board.r3.c3 && clues.l8 == 3u8 ||
+            board.r3.c5 > board.r3.c4 && clues.l8 == 4u8 ||
+            clues.l8 == 5u8) &&
+            (board.r4.c5 > board.r4.c4 && board.r4.c5 > board.r4.c3 && board.r4.c5 > board.r4.c2 && board.r4.c5 > board.r4.c1 && clues.l9 == 1u8 ||
+            board.r4.c5 > board.r4.c4 && board.r4.c5 > board.r4.c3 && board.r4.c5 > board.r4.c2 && clues.l9 == 2u8 ||
+            board.r4.c5 > board.r4.c4 && board.r4.c5 > board.r4.c3 && clues.l9 == 3u8 ||
+            board.r4.c5 > board.r4.c4 && clues.l9 == 4u8 ||
+            clues.l9 == 5u8) &&
+            (board.r5.c5 > board.r5.c4 && board.r5.c5 > board.r5.c3 && board.r5.c5 > board.r5.c2 && board.r5.c5 > board.r5.c1 && clues.l10 == 1u8 ||
+            board.r5.c5 > board.r5.c4 && board.r5.c5 > board.r5.c3 && board.r5.c5 > board.r5.c2 && clues.l10 == 2u8 ||
+            board.r5.c5 > board.r5.c4 && board.r5.c5 > board.r5.c3 && clues.l10 == 3u8 ||
+            board.r5.c5 > board.r5.c4 && clues.l10 == 4u8 ||
+            clues.l10 == 5u8);
+    }
+
     
 
 
