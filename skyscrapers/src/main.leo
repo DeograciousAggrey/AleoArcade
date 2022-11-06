@@ -283,6 +283,49 @@ program skyscrapers.aleo {
             clues.l10 == 5u8);
     }
 
+
+    // Check the top skyscrapers amount(From top to bottom).
+    // Given the clues from l11 to l15, check if the amount of skyscrapers that can be seen from the top satisfies the rules of the game.
+    // For each column, check if the amount of skyscrapers that can be seen from the top is equal to the clue.
+    // How many values are bigger than the highest value in the column from the top to bottom from row 1 to 5.
+    //If the amount of skyscrapers that can be seen from the top is equal to the clue, return true.
+    // If the amount of skyscrapers that can be seen from the top is not equal to the clue, return false.
+    function check_top_skyscrapers(board: Board, clues: Clues) -> bool {
+        return 
+            (board.r1.c1 > board.r2.c1 && board.r1.c1 > board.r3.c1 && board.r1.c1 > board.r4.c1 && board.r1.c1 > board.r5.c1 && clues.l11 == 1u8 ||
+            board.r1.c1 > board.r2.c1 && board.r1.c1 > board.r3.c1 && board.r1.c1 > board.r4.c1 && clues.l11 == 2u8 ||
+            board.r1.c1 > board.r2.c1 && board.r1.c1 > board.r3.c1 && clues.l11 == 3u8 ||
+            board.r1.c1 > board.r2.c1 && clues.l11 == 4u8 ||
+            clues.l11 == 5u8) &&
+            (board.r1.c2 > board.r2.c2 && board.r1.c2 > board.r3.c2 && board.r1.c2 > board.r4.c2 && board.r1.c2 > board.r5.c2 && clues.l12 == 1u8 ||
+            board.r1.c2 > board.r2.c2 && board.r1.c2 > board.r3.c2 && board.r1.c2 > board.r4.c2 && clues.l12 == 2u8 ||
+            board.r1.c2 > board.r2.c2 && board.r1.c2 > board.r3.c2 && clues.l12 == 3u8 ||
+            board.r1.c2 > board.r2.c2 && clues.l12 == 4u8 ||
+            clues.l12 == 5u8) &&
+            (board.r1.c3 > board.r2.c3 && board.r1.c3 > board.r3.c3 && board.r1.c3 > board.r4.c3 && board.r1.c3 > board.r5.c3 && clues.l13 == 1u8 ||
+            board.r1.c3 > board.r2.c3 && board.r1.c3 > board.r3.c3 && board.r1.c3 > board.r4.c3 && clues.l13 == 2u8 ||
+            board.r1.c3 > board.r2.c3 && board.r1.c3 > board.r3.c3 && clues.l13 == 3u8 ||
+            board.r1.c3 > board.r2.c3 && clues.l13 == 4u8 ||
+            clues.l13 == 5u8) &&
+            (board.r1.c4 > board.r2.c4 && board.r1.c4 > board.r3.c4 && board.r1.c4 > board.r4.c4 && board.r1.c4 > board.r5.c4 && clues.l14 == 1u8 ||
+            board.r1.c4 > board.r2.c4 && board.r1.c4 > board.r3.c4 && board.r1.c4 > board.r4.c4 && clues.l14 == 2u8 ||
+            board.r1.c4 > board.r2.c4 && board.r1.c4 > board.r3.c4 && clues.l14 == 3u8 ||
+            board.r1.c4 > board.r2.c4 && clues.l14 == 4u8 ||
+            clues.l14 == 5u8) &&
+            (board.r1.c5 > board.r2.c5 && board.r1.c5 > board.r3.c5 && board.r1.c5 > board.r4.c5 && board.r1.c5 > board.r5.c5 && clues.l15 == 1u8 ||
+            board.r1.c5 > board.r2.c5 && board.r1.c5 > board.r3.c5 && board.r1.c5 > board.r4.c5 && clues.l15 == 2u8 ||
+            board.r1.c5 > board.r2.c5 && board.r1.c5 > board.r3.c5 && clues.l15 == 3u8 ||
+            board.r1.c5 > board.r2.c5 && clues.l15 == 4u8 ||
+            clues.l15 == 5u8);
+    }
+
+
+    // Check the bottom skyscrapers amount(From bottom to top).
+    // Given the clues from l16 to l20, check if the amount of skyscrapers that can be seen from the bottom satisfies the rules of the game.
+    // For each column, check if the amount of skyscrapers that can be seen from the bottom is equal to the clue.
+    // How many values are bigger than the highest value in the column from the bottom to top from row 1 to 5.
+    //If the amount of skyscrapers that can be seen from the bottom is equal to the clue, return true.
+    // If the amount of skyscrapers that can be seen from the bottom is not equal to the clue, return false.
     
 
 
