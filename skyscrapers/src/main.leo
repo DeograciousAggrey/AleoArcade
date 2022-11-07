@@ -442,6 +442,60 @@ program skyscrapers.aleo {
         //If the number is valid, the board is updated with the number
         //If the number is not valid, the board is not updated
         let new_board: Board = board {
+            if (row == 1u8 && col == 1u8) {
+                r1c1: num
+            } else if (row == 1u8 && col == 2u8) {
+                r1c2: num
+            } else if (row == 1u8 && col == 3u8) {
+                r1c3: num
+            } else if (row == 1u8 && col == 4u8) {
+                r1c4: num
+            } else if (row == 1u8 && col == 5u8) {
+                r1c5: num
+            } else if (row == 2u8 && col == 1u8) {
+                r2c1: num
+            } else if (row == 2u8 && col == 2u8) {
+                r2c2: num
+            } else if (row == 2u8 && col == 3u8) {
+                r2c3: num
+            } else if (row == 2u8 && col == 4u8) {
+                r2c4: num
+            } else if (row == 2u8 && col == 5u8) {
+                r2c5: num
+            } else if (row == 3u8 && col == 1u8) {
+                r3c1: num
+            } else if (row == 3u8 && col == 2u8) {
+                r3c2: num
+            } else if (row == 3u8 && col == 3u8) {
+                r3c3: num
+            } else if (row == 3u8 && col == 4u8) {
+                r3c4: num
+            } else if (row == 3u8 && col == 5u8) {
+                r3c5: num
+            } else if (row == 4u8 && col == 1u8) {
+                r4c1: num
+            } else if (row == 4u8 && col == 2u8) {
+                r4c2: num
+            } else if (row == 4u8 && col == 3u8) {
+                r4c3: num
+            } else if (row == 4u8 && col == 4u8) {
+                r4c4: num
+            } else if (row == 4u8 && col == 5u8) {
+                r4c5: num
+            } else if (row == 5u8 && col == 1u8) {
+                r5c1: num
+            } else if (row == 5u8 && col == 2u8) {
+                r5c2: num
+            } else if (row == 5u8 && col == 3u8) {
+                r5c3: num
+            } else if (row == 5u8 && col == 4u8) {
+                r5c4: num
+            } else if (row == 5u8 && col == 5u8) {
+                r5c5: num
+            } 
+        };
+        
+        }
             
         
 
