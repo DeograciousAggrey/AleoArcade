@@ -519,7 +519,15 @@ program skyscrapers.aleo {
             // All the checks for the clues are called here for the updated board
             // If all the checks are true, the game is over
             // If any of the checks are false, the game is not over.
-            if 
+            // In short it checks for win
+            if check_win (updated, clues) {
+                // If the game is over, the board is returned
+                return (updated);
+            } else {
+                // If the game is not over, the board is not updated
+                return (board);
+                
+            
             
 
             }
