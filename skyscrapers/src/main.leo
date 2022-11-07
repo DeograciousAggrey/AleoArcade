@@ -364,7 +364,7 @@ program skyscrapers.aleo {
     // If all the rows and columns are filled with numbers, check if the clues left to right, right to left, top to bottom, bottom to top are satisfied.
     // If all the clues are satisfied, the game is won.
     // If all the clues are not satisfied, the game is not won.
-    transition play(board: Board, clues: Clues, row: u8, col: u8) -> (Board, Clues, u8) {
+    transition play(board: Board, clues: Clues, row: u8, col: u8, num: u8) -> (Board, Clues, u8) {
         //Check that the inputs are valid
         console.assert(row >= 1u8 && row <= 5u8);
         console.assert(col >= 1u8 && col <= 5u8);
@@ -493,8 +493,28 @@ program skyscrapers.aleo {
             } else if (row == 5u8 && col == 5u8) {
                 r5c5: num
             } 
+
+            // Construct the updated board
+            let updated: Board = board {
+                r1: Row { c1: r1c1, c2: r1c2, c3: r1c3, c4: r1c4, c5: r1c5 },
+                r2: Row { c1: r2c1, c2: r2c2, c3: r2c3, c4: r2c4, c5: r2c5 },
+                r3: Row { c1: r3c1, c2: r3c2, c3: r3c3, c4: r3c4, c5: r3c5 },
+                r4: Row { c1: r4c1, c2: r4c2, c3: r4c3, c4: r4c4, c5: r4c5 },
+                r5: Row { c1: r5c1, c2: r5c2, c3: r5c3, c4: r5c4, c5: r5c5 },
+            };
+
+            // Check if the game is over
+            // All the checks for the clues are called here for the updated board
+            // If all the checks are true, the game is over
+            // If any of the checks are false, the game is not over.
+            if 
+            
+
+            }
+
+
         };
-        
+
         }
             
         
