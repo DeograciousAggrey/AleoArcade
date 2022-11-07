@@ -355,6 +355,18 @@ program skyscrapers.aleo {
             clues.l20 == 5u8);
     }
 
+    // Check for win 
+    // Returns true if check left skyscrapers, check right skyscrapers, check top skyscrapers and check bottom skyscrapers are all true.
+    // Returns false if any of check left skyscrapers, check right skyscrapers, check top skyscrapers and check bottom skyscrapers are false.
+    function check_win(board: Board, clues: Clues) -> bool {
+        return check_left_skyscrapers(board, clues) && check_right_skyscrapers(board, clues) && check_top_skyscrapers(board, clues) && check_bottom_skyscrapers(board, clues);
+    }
+
+
+
+
+
+
     //Transition function to play the game
     //It returns an updated board with clues
     // When a player inputs a number into any cell, the checks are performed to see if the number is valid.
