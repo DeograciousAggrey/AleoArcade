@@ -427,6 +427,17 @@ program sudoku.aleo {
         );
     }
 
+    // Check for a valid board
+    // Returns true if all the checks above pass
+    function check_win(board: Board) -> bool {
+        return (
+            check_rows(board) &&
+            check_columns(board) &&
+            check_nonets(board) &&
+            check_sum(board)
+        );
+    }
+
 
 
 
