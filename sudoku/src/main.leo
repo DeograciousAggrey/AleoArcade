@@ -358,7 +358,32 @@ program sudoku.aleo {
             (board.r5.c9 != board.r6.c7 && board.r5.c9 != board.r6.c8 && board.r5.c9 != board.r6.c9) &&
             (board.r6.c7 != board.r6.c8 && board.r6.c7 != board.r6.c9) &&
             (board.r6.c8 != board.r6.c9) &&
-            
+            (board.r7.c1 != board.r7.c2 && board.r7.c1 != board.r7.c3 && board.r7.c1 != board.r8.c1 && board.r7.c1 != board.r8.c2 && board.r7.c1 != board.r8.c3 && board.r7.c1 != board.r9.c1 && board.r7.c1 != board.r9.c2 && board.r7.c1 != board.r9.c3) &&
+            (board.r7.c2 != board.r7.c3 && board.r7.c2 != board.r8.c1 && board.r7.c2 != board.r8.c2 && board.r7.c2 != board.r8.c3 && board.r7.c2 != board.r9.c1 && board.r7.c2 != board.r9.c2 && board.r7.c2 != board.r9.c3) &&
+            (board.r7.c3 != board.r8.c1 && board.r7.c3 != board.r8.c2 && board.r7.c3 != board.r8.c3 && board.r7.c3 != board.r9.c1 && board.r7.c3 != board.r9.c2 && board.r7.c3 != board.r9.c3) &&
+            (board.r8.c1 != board.r8.c2 && board.r8.c1 != board.r8.c3 && board.r8.c1 != board.r9.c1 && board.r8.c1 != board.r9.c2 && board.r8.c1 != board.r9.c3) &&
+            (board.r8.c2 != board.r8.c3 && board.r8.c2 != board.r9.c1 && board.r8.c2 != board.r9.c2 && board.r8.c2 != board.r9.c3) &&
+            (board.r8.c3 != board.r9.c1 && board.r8.c3 != board.r9.c2 && board.r8.c3 != board.r9.c3) &&
+            (board.r9.c1 != board.r9.c2 && board.r9.c1 != board.r9.c3) &&
+            (board.r9.c2 != board.r9.c3) &&
+            (board.r7.c4 != board.r7.c5 && board.r7.c4 != board.r7.c6 && board.r7.c4 != board.r8.c4 && board.r7.c4 != board.r8.c5 && board.r7.c4 != board.r8.c6 && board.r7.c4 != board.r9.c4 && board.r7.c4 != board.r9.c5 && board.r7.c4 != board.r9.c6) &&
+            (board.r7.c5 != board.r7.c6 && board.r7.c5 != board.r8.c4 && board.r7.c5 != board.r8.c5 && board.r7.c5 != board.r8.c6 && board.r7.c5 != board.r9.c4 && board.r7.c5 != board.r9.c5 && board.r7.c5 != board.r9.c6) &&
+            (board.r7.c6 != board.r8.c4 && board.r7.c6 != board.r8.c5 && board.r7.c6 != board.r8.c6 && board.r7.c6 != board.r9.c4 && board.r7.c6 != board.r9.c5 && board.r7.c6 != board.r9.c6) &&
+            (board.r8.c4 != board.r8.c5 && board.r8.c4 != board.r8.c6 && board.r8.c4 != board.r9.c4 && board.r8.c4 != board.r9.c5 && board.r8.c4 != board.r9.c6) &&
+            (board.r8.c5 != board.r8.c6 && board.r8.c5 != board.r9.c4 && board.r8.c5 != board.r9.c5 && board.r8.c5 != board.r9.c6) &&
+            (board.r8.c6 != board.r9.c4 && board.r8.c6 != board.r9.c5 && board.r8.c6 != board.r9.c6) &&
+            (board.r9.c4 != board.r9.c5 && board.r9.c4 != board.r9.c6) &&
+            (board.r9.c5 != board.r9.c6) &&
+            (board.r7.c7 != board.r7.c8 && board.r7.c7 != board.r7.c9 && board.r7.c7 != board.r8.c7 && board.r7.c7 != board.r8.c8 && board.r7.c7 != board.r8.c9 && board.r7.c7 != board.r9.c7 && board.r7.c7 != board.r9.c8 && board.r7.c7 != board.r9.c9) &&
+            (board.r7.c8 != board.r7.c9 && board.r7.c8 != board.r8.c7 && board.r7.c8 != board.r8.c8 && board.r7.c8 != board.r8.c9 && board.r7.c8 != board.r9.c7 && board.r7.c8 != board.r9.c8 && board.r7.c8 != board.r9.c9) &&
+            (board.r7.c9 != board.r8.c7 && board.r7.c9 != board.r8.c8 && board.r7.c9 != board.r8.c9 && board.r7.c9 != board.r9.c7 && board.r7.c9 != board.r9.c8 && board.r7.c9 != board.r9.c9) &&
+            (board.r8.c7 != board.r8.c8 && board.r8.c7 != board.r8.c9 && board.r8.c7 != board.r9.c7 && board.r8.c7 != board.r9.c8 && board.r8.c7 != board.r9.c9) &&
+            (board.r8.c8 != board.r8.c9 && board.r8.c8 != board.r9.c7 && board.r8.c8 != board.r9.c8 && board.r8.c8 != board.r9.c9) &&
+            (board.r8.c9 != board.r9.c7 && board.r8.c9 != board.r9.c8 && board.r8.c9 != board.r9.c9) &&
+            (board.r9.c7 != board.r9.c8 && board.r9.c7 != board.r9.c9) &&
+            (board.r9.c8 != board.r9.c9) 
+
+
             );
     }
 
