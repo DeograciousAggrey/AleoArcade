@@ -55,6 +55,97 @@ program sudoku.aleo {
         };
     }
 
+    // Check if the numbers of the board are >=1 and <=9
+    // Each number in a solved sudoku board must be between 1 and 9
+    function check_numbers(board: Board) -> bool {
+        return (board.r1.c1 >= 1u8 && board.r1.c1 <= 9u8) &&
+            (board.r1.c2 >= 1u8 && board.r1.c2 <= 9u8) &&
+            (board.r1.c3 >= 1u8 && board.r1.c3 <= 9u8) &&
+            (board.r1.c4 >= 1u8 && board.r1.c4 <= 9u8) &&
+            (board.r1.c5 >= 1u8 && board.r1.c5 <= 9u8) &&
+            (board.r1.c6 >= 1u8 && board.r1.c6 <= 9u8) &&
+            (board.r1.c7 >= 1u8 && board.r1.c7 <= 9u8) &&
+            (board.r1.c8 >= 1u8 && board.r1.c8 <= 9u8) &&
+            (board.r1.c9 >= 1u8 && board.r1.c9 <= 9u8) &&
+            (board.r2.c1 >= 1u8 && board.r2.c1 <= 9u8) &&
+            (board.r2.c2 >= 1u8 && board.r2.c2 <= 9u8) &&
+            (board.r2.c3 >= 1u8 && board.r2.c3 <= 9u8) &&
+            (board.r2.c4 >= 1u8 && board.r2.c4 <= 9u8) &&
+            (board.r2.c5 >= 1u8 && board.r2.c5 <= 9u8) &&
+            (board.r2.c6 >= 1u8 && board.r2.c6 <= 9u8) &&
+            (board.r2.c7 >= 1u8 && board.r2.c7 <= 9u8) &&
+            (board.r2.c8 >= 1u8 && board.r2.c8 <= 9u8) &&
+            (board.r2.c9 >= 1u8 && board.r2.c9 <= 9u8) &&
+            (board.r3.c1 >= 1u8 && board.r3.c1 <= 9u8) &&
+            (board.r3.c2 >= 1u8 && board.r3.c2 <= 9u8) &&
+            (board.r3.c3 >= 1u8 && board.r3.c3 <= 9u8) &&
+            (board.r3.c4 >= 1u8 && board.r3.c4 <= 9u8) &&
+            (board.r3.c5 >= 1u8 && board.r3.c5 <= 9u8) &&
+            (board.r3.c6 >= 1u8 && board.r3.c6 <= 9u8) &&
+            (board.r3.c7 >= 1u8 && board.r3.c7 <= 9u8) &&
+            (board.r3.c8 >= 1u8 && board.r3.c8 <= 9u8) &&
+            (board.r3.c9 >= 1u8 && board.r3.c9 <= 9u8) &&
+            (board.r4.c1 >= 1u8 && board.r4.c1 <= 9u8) &&
+            (board.r4.c2 >= 1u8 && board.r4.c2 <= 9u8) &&
+            (board.r4.c3 >= 1u8 && board.r4.c3 <= 9u8) &&
+            (board.r4.c4 >= 1u8 && board.r4.c4 <= 9u8) &&
+            (board.r4.c5 >= 1u8 && board.r4.c5 <= 9u8) &&
+            (board.r4.c6 >= 1u8 && board.r4.c6 <= 9u8) &&
+            (board.r4.c7 >= 1u8 && board.r4.c7 <= 9u8) &&
+            (board.r4.c8 >= 1u8 && board.r4.c8 <= 9u8) &&
+            (board.r4.c9 >= 1u8 && board.r4.c9 <= 9u8) &&
+            (board.r5.c1 >= 1u8 && board.r5.c1 <= 9u8) &&
+            (board.r5.c2 >= 1u8 && board.r5.c2 <= 9u8) &&
+            (board.r5.c3 >= 1u8 && board.r5.c3 <= 9u8) &&
+            (board.r5.c4 >= 1u8 && board.r5.c4 <= 9u8) &&
+            (board.r5.c5 >= 1u8 && board.r5.c5 <= 9u8) &&
+            (board.r5.c6 >= 1u8 && board.r5.c6 <= 9u8) &&
+            (board.r5.c7 >= 1u8 && board.r5.c7 <= 9u8) &&
+            (board.r5.c8 >= 1u8 && board.r5.c8 <= 9u8) &&
+            (board.r5.c9 >= 1u8 && board.r5.c9 <= 9u8) &&
+            (board.r6.c1 >= 1u8 && board.r6.c1 <= 9u8) &&
+            (board.r6.c2 >= 1u8 && board.r6.c2 <= 9u8) &&
+            (board.r6.c3 >= 1u8 && board.r6.c3 <= 9u8) &&
+            (board.r6.c4 >= 1u8 && board.r6.c4 <= 9u8) &&
+            (board.r6.c5 >= 1u8 && board.r6.c5 <= 9u8) &&
+            (board.r6.c6 >= 1u8 && board.r6.c6 <= 9u8) &&
+            (board.r6.c7 >= 1u8 && board.r6.c7 <= 9u8) &&
+            (board.r6.c8 >= 1u8 && board.r6.c8 <= 9u8) &&
+            (board.r6.c9 >= 1u8 && board.r6.c9 <= 9u8) &&
+            (board.r7.c1 >= 1u8 && board.r7.c1 <= 9u8) &&
+            (board.r7.c2 >= 1u8 && board.r7.c2 <= 9u8) &&
+            (board.r7.c3 >= 1u8 && board.r7.c3 <= 9u8) &&
+            (board.r7.c4 >= 1u8 && board.r7.c4 <= 9u8) &&
+            (board.r7.c5 >= 1u8 && board.r7.c5 <= 9u8) &&
+            (board.r7.c6 >= 1u8 && board.r7.c6 <= 9u8) &&
+            (board.r7.c7 >= 1u8 && board.r7.c7 <= 9u8) &&
+            (board.r7.c8 >= 1u8 && board.r7.c8 <= 9u8) &&
+            (board.r7.c9 >= 1u8 && board.r7.c9 <= 9u8) &&
+            (board.r8.c1 >= 1u8 && board.r8.c1 <= 9u8) &&
+            (board.r8.c2 >= 1u8 && board.r8.c2 <= 9u8) &&
+            (board.r8.c3 >= 1u8 && board.r8.c3 <= 9u8) &&
+            (board.r8.c4 >= 1u8 && board.r8.c4 <= 9u8) &&
+            (board.r8.c5 >= 1u8 && board.r8.c5 <= 9u8) &&
+            (board.r8.c6 >= 1u8 && board.r8.c6 <= 9u8) &&
+            (board.r8.c7 >= 1u8 && board.r8.c7 <= 9u8) &&
+            (board.r8.c8 >= 1u8 && board.r8.c8 <= 9u8) &&
+            (board.r8.c9 >= 1u8 && board.r8.c9 <= 9u8) &&
+            (board.r9.c1 >= 1u8 && board.r9.c1 <= 9u8) &&
+            (board.r9.c2 >= 1u8 && board.r9.c2 <= 9u8) &&
+            (board.r9.c3 >= 1u8 && board.r9.c3 <= 9u8) &&
+            (board.r9.c4 >= 1u8 && board.r9.c4 <= 9u8) &&
+            (board.r9.c5 >= 1u8 && board.r9.c5 <= 9u8) &&
+            (board.r9.c6 >= 1u8 && board.r9.c6 <= 9u8) &&
+            (board.r9.c7 >= 1u8 && board.r9.c7 <= 9u8) &&
+            (board.r9.c8 >= 1u8 && board.r9.c8 <= 9u8) &&
+            (board.r9.c9 >= 1u8 && board.r9.c9 <= 9u8);
+    }
+
+    // Check that each row contains 1-9 without repetition
+    function 
+
+
+
 
 
 
