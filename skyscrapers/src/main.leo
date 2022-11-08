@@ -82,47 +82,10 @@ program skyscrapers.aleo {
     }
 
     // List of Skyscrapers clue amounts in the order: left, right, top, bottom.(Rows then columns and if there is no clue, the amount is 0)
-    // - `l1` : The first amount in the list.
-    // - `l2` : The second amount in the list.
-    // - `l3` : The third amount in the list.
-    // - `l4` : The fourth amount in the list.
-    // - `l5` : The fifth amount in the list.
-    // - `l6` : The sixth amount in the list.
-    // - `l7` : The seventh amount in the list.
-    // - `l8` : The eighth amount in the list.
-    // - `l9` : The ninth amount in the list.
-    // - `l10` : The tenth amount in the list.
-    // - `l11` : The eleventh amount in the list.
-    // - `l12` : The twelfth amount in the list.
-    // - `l13` : The thirteenth amount in the list.
-    // - `l14` : The fourteenth amount in the list.
-    // - `l15` : The fifteenth amount in the list.
-    // - `l16` : The sixteenth amount in the list.
-    // - `l17` : The seventeenth amount in the list.
-    // - `l18` : The eighteenth amount in the list.
-    // - `l19` : The nineteenth amount in the list.
-    // - `l20` : The twentieth amount in the list.
+    // Should be stored in a struct, it will be passed into the play function.
+    // - `clues` : The list of clues.
     struct Clues {
-        l1: 2u8,
-        l2: 2u8,
-        l3: 3u8,
-        l4: 4u8,
-        l5: 1u8,
-        l6: 2u8,
-        l7: 3u8,
-        l8: 1u8,    
-        l9: 2u8,
-        l10: 3u8,
-        l11: 3u8,
-        l12: 2u8,
-        l13: 1u8,
-        l14: 3u8,
-        l15: 2u8,
-        l16: 1u8,
-        l17: 4u8,
-        l18: 3u8,
-        l19: 2u8,
-        l20: 2u8,
+        clues: [u8; 20],
     }
 
     // Check if the values of solved skyscrapers are >= 1 and <= 5.
@@ -526,7 +489,7 @@ program skyscrapers.aleo {
             } else {
                 // If the game is not over, the board is not updated
                 return (board);
-                
+
             
             
 
