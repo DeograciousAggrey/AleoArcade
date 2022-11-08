@@ -300,6 +300,18 @@ program sudoku.aleo {
 
     }
 
+    //  Check that a digit occurs only once in a nonet
+    // There are 9 nonets in a Sudoku puzzle
+    // Each nonet contains 9 cells
+    // Each cell contains a digit
+    // Each digit occurs only once in a nonet
+    // This function checks that this is true
+    // It returns true if the nonet is valid
+    // It returns false if the nonet is invalid
+    function check_nonets(board: Board) -> bool {
+        
+    }
+
 
 
 
