@@ -526,7 +526,199 @@ program sudoku.aleo {
         let r9c9: u8 = board.r9.c9;
 
         //Update the appropriate cell with the user's input
-        if 
+        if row == 1u8 && col == 1u8 && r1c1 == 0u8 {
+            board.r1.c1 = num;
+        } else if row == 1u8 && col == 2u8 && r1c2 == 0u8 {
+            board.r1.c2 = num;
+        } else if row == 1u8 && col == 3u8 && r1c3 == 0u8 {
+            board.r1.c3 = num;
+        } else if row == 1u8 && col == 4u8 && r1c4 == 0u8 {
+            board.r1.c4 = num;
+        } else if row == 1u8 && col == 5u8 && r1c5 == 0u8 {
+            board.r1.c5 = num;
+        } else if row == 1u8 && col == 6u8 && r1c6 == 0u8 {
+            board.r1.c6 = num;
+        } else if row == 1u8 && col == 7u8 && r1c7 == 0u8 {
+            board.r1.c7 = num;
+        } else if row == 1u8 && col == 8u8 && r1c8 == 0u8 {
+            board.r1.c8 = num;
+        } else if row == 1u8 && col == 9u8 && r1c9 == 0u8 {
+            board.r1.c9 = num;
+        } else if row == 2u8 && col == 1u8 && r2c1 == 0u8 {
+            board.r2.c1 = num;
+        } else if row == 2u8 && col == 2u8 && r2c2 == 0u8 {
+            board.r2.c2 = num;
+        } else if row == 2u8 && col == 3u8 && r2c3 == 0u8 {
+            board.r2.c3 = num;
+        } else if row == 2u8 && col == 4u8 && r2c4 == 0u8 {
+            board.r2.c4 = num;
+        } else if row == 2u8 && col == 5u8 && r2c5 == 0u8 {
+            board.r2.c5 = num;
+        } else if row == 2u8 && col == 6u8 && r2c6 == 0u8 {
+            board.r2.c6 = num;
+        } else if row == 2u8 && col == 7u8 && r2c7 == 0u8 {
+            board.r2.c7 = num;
+        } else if row == 2u8 && col == 8u8 && r2c8 == 0u8 {
+            board.r2.c8 = num;
+        } else if row == 2u8 && col == 9u8 && r2c9 == 0u8 {
+            board.r2.c9 = num;
+        } else if row == 3u8 && col == 1u8 && r3c1 == 0u8 {
+            board.r3.c1 = num;
+        } else if row == 3u8 && col == 2u8 && r3c2 == 0u8 {
+            board.r3.c2 = num;
+        } else if row == 3u8 && col == 3u8 && r3c3 == 0u8 {
+            board.r3.c3 = num;
+        } else if row == 3u8 && col == 4u8 && r3c4 == 0u8 {
+            board.r3.c4 = num;
+        } else if row == 3u8 && col == 5u8 && r3c5 == 0u8 {
+            board.r3.c5 = num;
+        } else if row == 3u8 && col == 6u8 && r3c6 == 0u8 {
+            board.r3.c6 = num;
+        } else if row == 3u8 && col == 7u8 && r3c7 == 0u8 {
+            board.r3.c7 = num;
+        } else if row == 3u8 && col == 8u8 && r3c8 == 0u8 {
+            board.r3.c8 = num;
+        } else if row == 3u8 && col == 9u8 && r3c9 == 0u8 {
+            board.r3.c9 = num;
+        } else if row == 4u8 && col == 1u8 && r4c1 == 0u8 {
+            board.r4.c1 = num;
+        } else if row == 4u8 && col == 2u8 && r4c2 == 0u8 {
+            board.r4.c2 = num;
+        } else if row == 4u8 && col == 3u8 && r4c3 == 0u8 {
+            board.r4.c3 = num;
+        } else if row == 4u8 && col == 4u8 && r4c4 == 0u8 {
+            board.r4.c4 = num;
+        } else if row == 4u8 && col == 5u8 && r4c5 == 0u8 {
+            board.r4.c5 = num;
+        } else if row == 4u8 && col == 6u8 && r4c6 == 0u8 {
+            board.r4.c6 = num;
+        } else if row == 4u8 && col == 7u8 && r4c7 == 0u8 {
+            board.r4.c7 = num;
+        } else if row == 4u8 && col == 8u8 && r4c8 == 0u8 {
+            board.r4.c8 = num;
+        } else if row == 4u8 && col == 9u8 && r4c9 == 0u8 {
+            board.r4.c9 = num;
+        } else if row == 5u8 && col == 1u8 && r5c1 == 0u8 {
+            board.r5.c1 = num;
+        } else if row == 5u8 && col == 2u8 && r5c2 == 0u8 {
+            board.r5.c2 = num;
+        } else if row == 5u8 && col == 3u8 && r5c3 == 0u8 {
+            board.r5.c3 = num;
+        } else if row == 5u8 && col == 4u8 && r5c4 == 0u8 {
+            board.r5.c4 = num;
+        } else if row == 5u8 && col == 5u8 && r5c5 == 0u8 {
+            board.r5.c5 = num;
+        } else if row == 5u8 && col == 6u8 && r5c6 == 0u8 {
+            board.r5.c6 = num;
+        } else if row == 5u8 && col == 7u8 && r5c7 == 0u8 {
+            board.r5.c7 = num;
+        } else if row == 5u8 && col == 8u8 && r5c8 == 0u8 {
+            board.r5.c8 = num;
+        } else if row == 5u8 && col == 9u8 && r5c9 == 0u8 {
+            board.r5.c9 = num;
+        } else if row == 6u8 && col == 1u8 && r6c1 == 0u8 {
+            board.r6.c1 = num;
+        } else if row == 6u8 && col == 2u8 && r6c2 == 0u8 {
+            board.r6.c2 = num;
+        } else if row == 6u8 && col == 3u8 && r6c3 == 0u8 {
+            board.r6.c3 = num;
+        } else if row == 6u8 && col == 4u8 && r6c4 == 0u8 {
+            board.r6.c4 = num;
+        } else if row == 6u8 && col == 5u8 && r6c5 == 0u8 {
+            board.r6.c5 = num;
+        } else if row == 6u8 && col == 6u8 && r6c6 == 0u8 {
+            board.r6.c6 = num;
+        } else if row == 6u8 && col == 7u8 && r6c7 == 0u8 {
+            board.r6.c7 = num;
+        } else if row == 6u8 && col == 8u8 && r6c8 == 0u8 {
+            board.r6.c8 = num;
+        } else if row == 6u8 && col == 9u8 && r6c9 == 0u8 {
+            board.r6.c9 = num;
+        } else if row == 7u8 && col == 1u8 && r7c1 == 0u8 {
+            board.r7.c1 = num;
+        } else if row == 7u8 && col == 2u8 && r7c2 == 0u8 {
+            board.r7.c2 = num;
+        } else if row == 7u8 && col == 3u8 && r7c3 == 0u8 {
+            board.r7.c3 = num;
+        } else if row == 7u8 && col == 4u8 && r7c4 == 0u8 {
+            board.r7.c4 = num;
+        } else if row == 7u8 && col == 5u8 && r7c5 == 0u8 {
+            board.r7.c5 = num;
+        } else if row == 7u8 && col == 6u8 && r7c6 == 0u8 {
+            board.r7.c6 = num;
+        } else if row == 7u8 && col == 7u8 && r7c7 == 0u8 {
+            board.r7.c7 = num;
+        } else if row == 7u8 && col == 8u8 && r7c8 == 0u8 {
+            board.r7.c8 = num;
+        } else if row == 7u8 && col == 9u8 && r7c9 == 0u8 {
+            board.r7.c9 = num;
+        } else if row == 8u8 && col == 1u8 && r8c1 == 0u8 {
+            board.r8.c1 = num;
+        } else if row == 8u8 && col == 2u8 && r8c2 == 0u8 {
+            board.r8.c2 = num;
+        } else if row == 8u8 && col == 3u8 && r8c3 == 0u8 {
+            board.r8.c3 = num;
+        } else if row == 8u8 && col == 4u8 && r8c4 == 0u8 {
+            board.r8.c4 = num;
+        } else if row == 8u8 && col == 5u8 && r8c5 == 0u8 {
+            board.r8.c5 = num;
+        } else if row == 8u8 && col == 6u8 && r8c6 == 0u8 {
+            board.r8.c6 = num;
+        } else if row == 8u8 && col == 7u8 && r8c7 == 0u8 {
+            board.r8.c7 = num;
+        } else if row == 8u8 && col == 8u8 && r8c8 == 0u8 {
+            board.r8.c8 = num;
+        } else if row == 8u8 && col == 9u8 && r8c9 == 0u8 {
+            board.r8.c9 = num;
+        } else if row == 9u8 && col == 1u8 && r9c1 == 0u8 {
+            board.r9.c1 = num;
+        } else if row == 9u8 && col == 2u8 && r9c2 == 0u8 {
+            board.r9.c2 = num;
+        } else if row == 9u8 && col == 3u8 && r9c3 == 0u8 {
+            board.r9.c3 = num;
+        } else if row == 9u8 && col == 4u8 && r9c4 == 0u8 {
+            board.r9.c4 = num;
+        } else if row == 9u8 && col == 5u8 && r9c5 == 0u8 {
+            board.r9.c5 = num;
+        } else if row == 9u8 && col == 6u8 && r9c6 == 0u8 {
+            board.r9.c6 = num;
+        } else if row == 9u8 && col == 7u8 && r9c7 == 0u8 {
+            board.r9.c7 = num;
+        } else if row == 9u8 && col == 8u8 && r9c8 == 0u8 {
+            board.r9.c8 = num;
+        } else if row == 9u8 && col == 9u8 && r9c9 == 0u8 {
+            board.r9.c9 = num;
+        } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
