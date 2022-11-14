@@ -429,17 +429,14 @@ program sudoku.aleo {
 
     // Check for a valid board
     // Returns true if all the checks above pass
-    transition check_win(board: Board) -> bool {
-        return (
-            check_rows(board) &&
-            check_columns(board) &&
-            check_nonets(board) &&
-            check_sum(board)
-        );
+    function check_win(board: Board) -> bool {
+      return ( check_rows(board) && check_columns(board) && check_nonets(board) && check_sum(board) );  
     }
 
-    // Play a game of sudoku
-    // Returns the winning board
+    
+
+
+
     transition play_game(board: Board, num: u8, row: u8, col: u8) -> Board {
         
         //Unpack the entries of the board into variables
