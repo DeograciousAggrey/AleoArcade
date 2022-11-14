@@ -438,6 +438,95 @@ program sudoku.aleo {
         );
     }
 
+    // Play a game of sudoku
+    // Returns the winning board
+    transition play_game(board: Board, num: u8) -> Board {
+        
+        //Unpack the entries of the board into variables
+        let r1c1: u8 = board.r1.c1;
+        let r1c2: u8 = board.r1.c2;
+        let r1c3: u8 = board.r1.c3;
+        let r1c4: u8 = board.r1.c4;
+        let r1c5: u8 = board.r1.c5;
+        let r1c6: u8 = board.r1.c6;
+        let r1c7: u8 = board.r1.c7;
+        let r1c8: u8 = board.r1.c8;
+        let r1c9: u8 = board.r1.c9;
+        let r2c1: u8 = board.r2.c1;
+        let r2c2: u8 = board.r2.c2;
+        let r2c3: u8 = board.r2.c3;
+        let r2c4: u8 = board.r2.c4;
+        let r2c5: u8 = board.r2.c5;
+        let r2c6: u8 = board.r2.c6;
+        let r2c7: u8 = board.r2.c7;
+        let r2c8: u8 = board.r2.c8;
+        let r2c9: u8 = board.r2.c9;
+        let r3c1: u8 = board.r3.c1;
+        let r3c2: u8 = board.r3.c2;
+        let r3c3: u8 = board.r3.c3;
+        let r3c4: u8 = board.r3.c4;
+        let r3c5: u8 = board.r3.c5;
+        let r3c6: u8 = board.r3.c6;
+        let r3c7: u8 = board.r3.c7;
+        let r3c8: u8 = board.r3.c8;
+        let r3c9: u8 = board.r3.c9;
+        let r4c1: u8 = board.r4.c1;
+        let r4c2: u8 = board.r4.c2;
+        let r4c3: u8 = board.r4.c3;
+        let r4c4: u8 = board.r4.c4;
+        let r4c5: u8 = board.r4.c5;
+        let r4c6: u8 = board.r4.c6;
+        let r4c7: u8 = board.r4.c7;
+        let r4c8: u8 = board.r4.c8;
+        let r4c9: u8 = board.r4.c9;
+        let r5c1: u8 = board.r5.c1;
+        let r5c2: u8 = board.r5.c2;
+        let r5c3: u8 = board.r5.c3;
+        let r5c4: u8 = board.r5.c4;
+        let r5c5: u8 = board.r5.c5;
+        let r5c6: u8 = board.r5.c6;
+        let r5c7: u8 = board.r5.c7;
+        let r5c8: u8 = board.r5.c8;
+        let r5c9: u8 = board.r5.c9;
+        let r6c1: u8 = board.r6.c1;
+        let r6c2: u8 = board.r6.c2;
+        let r6c3: u8 = board.r6.c3;
+        let r6c4: u8 = board.r6.c4;
+        let r6c5: u8 = board.r6.c5;
+        let r6c6: u8 = board.r6.c6;
+        let r6c7: u8 = board.r6.c7;
+        let r6c8: u8 = board.r6.c8;
+        let r6c9: u8 = board.r6.c9;
+        let r7c1: u8 = board.r7.c1;
+        let r7c2: u8 = board.r7.c2;
+        let r7c3: u8 = board.r7.c3;
+        let r7c4: u8 = board.r7.c4;
+        let r7c5: u8 = board.r7.c5;
+        let r7c6: u8 = board.r7.c6;
+        let r7c7: u8 = board.r7.c7;
+        let r7c8: u8 = board.r7.c8;
+        let r7c9: u8 = board.r7.c9;
+        let r8c1: u8 = board.r8.c1;
+        let r8c2: u8 = board.r8.c2;
+        let r8c3: u8 = board.r8.c3;
+        let r8c4: u8 = board.r8.c4;
+        let r8c5: u8 = board.r8.c5;
+        let r8c6: u8 = board.r8.c6;
+        let r8c7: u8 = board.r8.c7;
+        let r8c8: u8 = board.r8.c8;
+        let r8c9: u8 = board.r8.c9;
+        let r9c1: u8 = board.r9.c1;
+        let r9c2: u8 = board.r9.c2;
+        let r9c3: u8 = board.r9.c3;
+        let r9c4: u8 = board.r9.c4;
+        let r9c5: u8 = board.r9.c5;
+        let r9c6: u8 = board.r9.c6;
+        let r9c7: u8 = board.r9.c7;
+        let r9c8: u8 = board.r9.c8;
+        let r9c9: u8 = board.r9.c9;
+        
+    }
+
 
 
 
