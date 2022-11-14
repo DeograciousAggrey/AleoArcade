@@ -429,7 +429,7 @@ program sudoku.aleo {
 
     // Check for a valid board
     // Returns true if all the checks above pass
-    function check_win(board: Board) -> bool {
+    transition check_win(board: Board) -> bool {
         return (
             check_rows(board) &&
             check_columns(board) &&
@@ -707,33 +707,6 @@ program sudoku.aleo {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           // Check if the board is solved
         if check_win(updated) {
             return (updated);
@@ -745,23 +718,6 @@ program sudoku.aleo {
              
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
