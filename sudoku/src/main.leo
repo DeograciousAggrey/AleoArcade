@@ -692,6 +692,19 @@ program sudoku.aleo {
 
 
 
+    // Construct the updated board
+    let updated : Board = Board {
+        r1: Row { c1: r1c1, c2: r1c2, c3: r1c3, c4: r1c4, c5: r1c5, c6: r1c6, c7: r1c7, c8: r1c8, c9: r1c9 },
+        r2: Row { c1: r2c1, c2: r2c2, c3: r2c3, c4: r2c4, c5: r2c5, c6: r2c6, c7: r2c7, c8: r2c8, c9: r2c9 },
+        r3: Row { c1: r3c1, c2: r3c2, c3: r3c3, c4: r3c4, c5: r3c5, c6: r3c6, c7: r3c7, c8: r3c8, c9: r3c9 },
+        r4: Row { c1: r4c1, c2: r4c2, c3: r4c3, c4: r4c4, c5: r4c5, c6: r4c6, c7: r4c7, c8: r4c8, c9: r4c9 },
+        r5: Row { c1: r5c1, c2: r5c2, c3: r5c3, c4: r5c4, c5: r5c5, c6: r5c6, c7: r5c7, c8: r5c8, c9: r5c9 },
+        r6: Row { c1: r6c1, c2: r6c2, c3: r6c3, c4: r6c4, c5: r6c5, c6: r6c6, c7: r6c7, c8: r6c8, c9: r6c9 },
+        r7: Row { c1: r7c1, c2: r7c2, c3: r7c3, c4: r7c4, c5: r7c5, c6: r7c6, c7: r7c7, c8: r7c8, c9: r7c9 },
+        r8: Row { c1: r8c1, c2: r8c2, c3: r8c3, c4: r8c4, c5: r8c5, c6: r8c6, c7: r8c7, c8: r8c8, c9: r8c9 },
+        r9: Row { c1: r9c1, c2: r9c2, c3: r9c3, c4: r9c4, c5: r9c5, c6: r9c6, c7: r9c7, c8: r9c8, c9: r9c9 },
+    };
+    
 
 
 
@@ -721,110 +734,7 @@ program sudoku.aleo {
 
 
 
-
-        let updated: Board = Board {
-            r1: Row {
-                c1: r1c1,
-                c2: r1c2,
-                c3: r1c3,
-                c4: r1c4,
-                c5: r1c5,
-                c6: r1c6,
-                c7: r1c7,
-                c8: r1c8,
-                c9: r1c9,
-            },
-            r2: Row {
-                c1: r2c1,
-                c2: r2c2,
-                c3: r2c3,
-                c4: r2c4,
-                c5: r2c5,
-                c6: r2c6,
-                c7: r2c7,
-                c8: r2c8,
-                c9: r2c9,
-            },
-            r3: Row {
-                c1: r3c1,
-                c2: r3c2,
-                c3: r3c3,
-                c4: r3c4,
-                c5: r3c5,
-                c6: r3c6,
-                c7: r3c7,
-                c8: r3c8,
-                c9: r3c9,
-            },
-            r4: Row {
-                c1: r4c1,
-                c2: r4c2,
-                c3: r4c3,
-                c4: r4c4,
-                c5: r4c5,
-                c6: r4c6,
-                c7: r4c7,
-                c8: r4c8,
-                c9: r4c9,
-            },
-            r5: Row {
-                c1: r5c1,
-                c2: r5c2,
-                c3: r5c3,
-                c4: r5c4,
-                c5: r5c5,
-                c6: r5c6,
-                c7: r5c7,
-                c8: r5c8,
-                c9: r5c9,
-            },
-            r6: Row {
-                c1: r6c1,
-                c2: r6c2,
-                c3: r6c3,
-                c4: r6c4,
-                c5: r6c5,
-                c6: r6c6,
-                c7: r6c7,
-                c8: r6c8,
-                c9: r6c9,
-            },
-            r7: Row {
-                c1: r7c1,
-                c2: r7c2,
-                c3: r7c3,
-                c4: r7c4,
-                c5: r7c5,
-                c6: r7c6,
-                c7: r7c7,
-                c8: r7c8,
-                c9: r7c9,
-            },
-            r8: Row {
-                c1: r8c1,
-                c2: r8c2,
-                c3: r8c3,
-                c4: r8c4,
-                c5: r8c5,
-                c6: r8c6,
-                c7: r8c7,
-                c8: r8c8,
-                c9: r8c9,
-            },
-            r9: Row {
-                c1: r9c1,
-                c2: r9c2,
-                c3: r9c3,
-                c4: r9c4,
-                c5: r9c5,
-                c6: r9c6,
-                c7: r9c7,
-                c8: r9c8,
-                c9: r9c9,
-            },
-        };
-
-        // Check if the board is solved
+          // Check if the board is solved
         if check_win(updated) {
             return (updated);
         } else {
