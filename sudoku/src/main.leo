@@ -57,8 +57,8 @@ program sudoku.aleo {
 
     // Check if the numbers of the board are >=1 and <=9
     // Each number in a solved sudoku board must be between 1 and 9
-    function check_numbers(board: Board) -> bool {
-        return (board.r1.c1 >= 1u8 && board.r1.c1 <= 9u8) &&
+    function check_win(board: Board) -> bool {
+        return( (board.r1.c1 >= 1u8 && board.r1.c1 <= 9u8) &&
             (board.r1.c2 >= 1u8 && board.r1.c2 <= 9u8) &&
             (board.r1.c3 >= 1u8 && board.r1.c3 <= 9u8) &&
             (board.r1.c4 >= 1u8 && board.r1.c4 <= 9u8) &&
@@ -138,12 +138,10 @@ program sudoku.aleo {
             (board.r9.c6 >= 1u8 && board.r9.c6 <= 9u8) &&
             (board.r9.c7 >= 1u8 && board.r9.c7 <= 9u8) &&
             (board.r9.c8 >= 1u8 && board.r9.c8 <= 9u8) &&
-            (board.r9.c9 >= 1u8 && board.r9.c9 <= 9u8);
-    }
+            (board.r9.c9 >= 1u8 && board.r9.c9 <= 9u8) &&
 
-    // Check that each row contains 1-9 without repetition
-    function check_rows (board: Board) -> bool {
-        return (
+            //// Check that each row contains 1-9 without repetition
+
             (board.r1.c1 != board.r1.c2 && board.r1.c1 != board.r1.c3 && board.r1.c1 != board.r1.c4 && board.r1.c1 != board.r1.c5 && board.r1.c1 != board.r1.c6 && board.r1.c1 != board.r1.c7 && board.r1.c1 != board.r1.c8 && board.r1.c1 != board.r1.c9) &&
             (board.r1.c2 != board.r1.c3 && board.r1.c2 != board.r1.c4 && board.r1.c2 != board.r1.c5 && board.r1.c2 != board.r1.c6 && board.r1.c2 != board.r1.c7 && board.r1.c2 != board.r1.c8 && board.r1.c2 != board.r1.c9) &&
             (board.r1.c3 != board.r1.c4 && board.r1.c3 != board.r1.c5 && board.r1.c3 != board.r1.c6 && board.r1.c3 != board.r1.c7 && board.r1.c3 != board.r1.c8 && board.r1.c3 != board.r1.c9) &&
@@ -215,14 +213,10 @@ program sudoku.aleo {
             (board.r9.c5 != board.r9.c6 && board.r9.c5 != board.r9.c7 && board.r9.c5 != board.r9.c8 && board.r9.c5 != board.r9.c9) &&
             (board.r9.c6 != board.r9.c7 && board.r9.c6 != board.r9.c8 && board.r9.c6 != board.r9.c9) &&
             (board.r9.c7 != board.r9.c8 && board.r9.c7 != board.r9.c9) &&
-            (board.r9.c8 != board.r9.c9) 
+            (board.r9.c8 != board.r9.c9) &&
 
-        );
-    } 
+             // Check that each column contains the numbers 1-9 exactly once
 
-    // Check that each column contains the numbers 1-9 exactly once
-    function check_columns(board: Board) -> bool {
-        return (
             (board.r1.c1 != board.r2.c1 && board.r1.c1 != board.r3.c1 && board.r1.c1 != board.r4.c1 && board.r1.c1 != board.r5.c1 && board.r1.c1 != board.r6.c1 && board.r1.c1 != board.r7.c1 && board.r1.c1 != board.r8.c1 && board.r1.c1 != board.r9.c1) &&
             (board.r2.c1 != board.r3.c1 && board.r2.c1 != board.r4.c1 && board.r2.c1 != board.r5.c1 && board.r2.c1 != board.r6.c1 && board.r2.c1 != board.r7.c1 && board.r2.c1 != board.r8.c1 && board.r2.c1 != board.r9.c1) &&
             (board.r3.c1 != board.r4.c1 && board.r3.c1 != board.r5.c1 && board.r3.c1 != board.r6.c1 && board.r3.c1 != board.r7.c1 && board.r3.c1 != board.r8.c1 && board.r3.c1 != board.r9.c1) &&
@@ -295,11 +289,7 @@ program sudoku.aleo {
             (board.r6.c9 != board.r7.c9 && board.r6.c9 != board.r8.c9 && board.r6.c9 != board.r9.c9) &&
             (board.r7.c9 != board.r8.c9 && board.r7.c9 != board.r9.c9) &&
             (board.r8.c9 != board.r9.c9)
-        );
-
-
-    }
-
+            
     //  Check that a digit occurs only once in a nonet
     // There are 9 nonets in a Sudoku puzzle
     // Each nonet contains 9 cells
@@ -308,8 +298,7 @@ program sudoku.aleo {
     // This function checks that this is true
     // It returns true if the nonet is valid
     // It returns false if the nonet is invalid
-    function check_nonets(board: Board) -> bool {
-        return (
+            
             (board.r1.c1 != board.r1.c2 && board.r1.c1 != board.r1.c3 && board.r1.c1 != board.r2.c1 && board.r1.c1 != board.r2.c2 && board.r1.c1 != board.r2.c3 && board.r1.c1 != board.r3.c1 && board.r1.c1 != board.r3.c2 && board.r1.c1 != board.r3.c3) &&
             (board.r1.c2 != board.r1.c3 && board.r1.c2 != board.r2.c1 && board.r1.c2 != board.r2.c2 && board.r1.c2 != board.r2.c3 && board.r1.c2 != board.r3.c1 && board.r1.c2 != board.r3.c2 && board.r1.c2 != board.r3.c3) &&
             (board.r1.c3 != board.r2.c1 && board.r1.c3 != board.r2.c2 && board.r1.c3 != board.r2.c3 && board.r1.c3 != board.r3.c1 && board.r1.c3 != board.r3.c2 && board.r1.c3 != board.r3.c3) &&
@@ -384,15 +373,11 @@ program sudoku.aleo {
             (board.r9.c8 != board.r9.c9) 
 
 
-            );
-    }   
-
     // Check that the sum of every row, column and nonet is 45
     // (1+2+3+4+5+6+7+8+9 = 45)
     // returns true if the sum of every row, column and nonet is 45
     // returns false otherwise
-    function check_sum (board: Board) -> bool {
-        return (
+
             (board.r1.c1 + board.r1.c2 + board.r1.c3 + board.r1.c4 + board.r1.c5 + board.r1.c6 + board.r1.c7 + board.r1.c8 + board.r1.c9 == 45) &&
             (board.r2.c1 + board.r2.c2 + board.r2.c3 + board.r2.c4 + board.r2.c5 + board.r2.c6 + board.r2.c7 + board.r2.c8 + board.r2.c9 == 45) &&
             (board.r3.c1 + board.r3.c2 + board.r3.c3 + board.r3.c4 + board.r3.c5 + board.r3.c6 + board.r3.c7 + board.r3.c8 + board.r3.c9 == 45) &&
@@ -420,18 +405,21 @@ program sudoku.aleo {
             (board.r7.c1 + board.r7.c2 + board.r7.c3 + board.r8.c1 + board.r8.c2 + board.r8.c3 + board.r9.c1 + board.r9.c2 + board.r9.c3 == 45) &&
             (board.r7.c4 + board.r7.c5 + board.r7.c6 + board.r8.c4 + board.r8.c5 + board.r8.c6 + board.r9.c4 + board.r9.c5 + board.r9.c6 == 45) &&
             (board.r7.c7 + board.r7.c8 + board.r7.c9 + board.r8.c7 + board.r8.c8 + board.r8.c9 + board.r9.c7 + board.r9.c8 + board.r9.c9 == 45) 
-            
-
-
 
         );
     }
 
-    // Check for a valid board
-    // Returns true if all the checks above pass
-    function check_win(board: Board) -> bool {
-      return ( check_rows(board) && check_columns(board) && check_nonets(board) && check_sum(board) );  
-    }
+     
+
+   
+    
+
+    
+      
+
+   
+
+
 
     
 
