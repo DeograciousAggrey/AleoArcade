@@ -24,6 +24,30 @@ struct Board {
 
 
 
+//Define a check valid solution function that determines if the proposed solution "solved_board" is the valid  solution to the initial state of the board "unsolved_board"
+// Return true if the proposed solution is valid and false otherwise
+transition check_valid_solution(solved_board: Board, unsolved_board: Board) -> bool {
+    //Check if the proposed solution is valid
+    //If the proposed solution is valid return true
+    //If the proposed solution is not valid return false
+
+}
+
+
+transition play_sudoku(unsolved_board: Board, row: u8, col: u8, value: u8) -> Board {
+    //Check if the proposed solution is valid
+    //If the proposed solution is valid return true
+    //If the proposed solution is not valid return false
+
+}
+
+
+
+
+
+
+
+
 
 
 
