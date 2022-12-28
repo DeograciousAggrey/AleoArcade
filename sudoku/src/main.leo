@@ -244,8 +244,12 @@ program sudoku.aleo {
     let unsolvedR9C9: u8 = unsolvedboard.r9.c9;
 
 
+    
+
+   }
 
     
+
 
 
 
