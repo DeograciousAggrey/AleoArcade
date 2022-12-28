@@ -244,7 +244,186 @@ program sudoku.aleo {
     let unsolvedR9C9: u8 = unsolvedboard.r9.c9;
 
 
-    return ();
+    return (
+        // proposed solution numbers are between 1 and 9 inclusive
+        propr1c1 >= 1u8 && propr1c1 <= 9u8 && propr1c2 >= 1u8 && propr1c2 <= 9u8 && propr1c3 >= 1u8 && propr1c3 <= 9u8 && propr1c4 >= 1u8 && propr1c4 <= 9u8 && propr1c5 >= 1u8 && propr1c5 <= 9u8 && propr1c6 >= 1u8 && propr1c6 <= 9u8 && propr1c7 >= 1u8 && propr1c7 <= 9u8 && propr1c8 >= 1u8 && propr1c8 <= 9u8 && propr1c9 >= 1u8 && propr1c9 <= 9u8 &&
+        propr2c1 >= 1u8 && propr2c1 <= 9u8 && propr2c2 >= 1u8 && propr2c2 <= 9u8 && propr2c3 >= 1u8 && propr2c3 <= 9u8 && propr2c4 >= 1u8 && propr2c4 <= 9u8 && propr2c5 >= 1u8 && propr2c5 <= 9u8 && propr2c6 >= 1u8 && propr2c6 <= 9u8 && propr2c7 >= 1u8 && propr2c7 <= 9u8 && propr2c8 >= 1u8 && propr2c8 <= 9u8 && propr2c9 >= 1u8 && propr2c9 <= 9u8 &&
+        propr3c1 >= 1u8 && propr3c1 <= 9u8 && propr3c2 >= 1u8 && propr3c2 <= 9u8 && propr3c3 >= 1u8 && propr3c3 <= 9u8 && propr3c4 >= 1u8 && propr3c4 <= 9u8 && propr3c5 >= 1u8 && propr3c5 <= 9u8 && propr3c6 >= 1u8 && propr3c6 <= 9u8 && propr3c7 >= 1u8 && propr3c7 <= 9u8 && propr3c8 >= 1u8 && propr3c8 <= 9u8 && propr3c9 >= 1u8 && propr3c9 <= 9u8 &&
+        propr4c1 >= 1u8 && propr4c1 <= 9u8 && propr4c2 >= 1u8 && propr4c2 <= 9u8 && propr4c3 >= 1u8 && propr4c3 <= 9u8 && propr4c4 >= 1u8 && propr4c4 <= 9u8 && propr4c5 >= 1u8 && propr4c5 <= 9u8 && propr4c6 >= 1u8 && propr4c6 <= 9u8 && propr4c7 >= 1u8 && propr4c7 <= 9u8 && propr4c8 >= 1u8 && propr4c8 <= 9u8 && propr4c9 >= 1u8 && propr4c9 <= 9u8 &&
+        propr5c1 >= 1u8 && propr5c1 <= 9u8 && propr5c2 >= 1u8 && propr5c2 <= 9u8 && propr5c3 >= 1u8 && propr5c3 <= 9u8 && propr5c4 >= 1u8 && propr5c4 <= 9u8 && propr5c5 >= 1u8 && propr5c5 <= 9u8 && propr5c6 >= 1u8 && propr5c6 <= 9u8 && propr5c7 >= 1u8 && propr5c7 <= 9u8 && propr5c8 >= 1u8 && propr5c8 <= 9u8 && propr5c9 >= 1u8 && propr5c9 <= 9u8 &&
+        propr6c1 >= 1u8 && propr6c1 <= 9u8 && propr6c2 >= 1u8 && propr6c2 <= 9u8 && propr6c3 >= 1u8 && propr6c3 <= 9u8 && propr6c4 >= 1u8 && propr6c4 <= 9u8 && propr6c5 >= 1u8 && propr6c5 <= 9u8 && propr6c6 >= 1u8 && propr6c6 <= 9u8 && propr6c7 >= 1u8 && propr6c7 <= 9u8 && propr6c8 >= 1u8 && propr6c8 <= 9u8 && propr6c9 >= 1u8 && propr6c9 <= 9u8 &&
+        propr7c1 >= 1u8 && propr7c1 <= 9u8 && propr7c2 >= 1u8 && propr7c2 <= 9u8 && propr7c3 >= 1u8 && propr7c3 <= 9u8 && propr7c4 >= 1u8 && propr7c4 <= 9u8 && propr7c5 >= 1u8 && propr7c5 <= 9u8 && propr7c6 >= 1u8 && propr7c6 <= 9u8 && propr7c7 >= 1u8 && propr7c7 <= 9u8 && propr7c8 >= 1u8 && propr7c8 <= 9u8 && propr7c9 >= 1u8 && propr7c9 <= 9u8 &&
+        propr8c1 >= 1u8 && propr8c1 <= 9u8 && propr8c2 >= 1u8 && propr8c2 <= 9u8 && propr8c3 >= 1u8 && propr8c3 <= 9u8 && propr8c4 >= 1u8 && propr8c4 <= 9u8 && propr8c5 >= 1u8 && propr8c5 <= 9u8 && propr8c6 >= 1u8 && propr8c6 <= 9u8 && propr8c7 >= 1u8 && propr8c7 <= 9u8 && propr8c8 >= 1u8 && propr8c8 <= 9u8 && propr8c9 >= 1u8 && propr8c9 <= 9u8 &&
+        propr9c1 >= 1u8 && propr9c1 <= 9u8 && propr9c2 >= 1u8 && propr9c2 <= 9u8 && propr9c3 >= 1u8 && propr9c3 <= 9u8 && propr9c4 >= 1u8 && propr9c4 <= 9u8 && propr9c5 >= 1u8 && propr9c5 <= 9u8 && propr9c6 >= 1u8 && propr9c6 <= 9u8 && propr9c7 >= 1u8 && propr9c7 <= 9u8 && propr9c8 >= 1u8 && propr9c8 <= 9u8 && propr9c9 >= 1u8 && propr9c9 <= 9u8 &&
+        propr1c1 != propr1c2 && propr1c1 != propr1c3 && propr1c1 != propr1c4 && propr1c1 != propr1c5 && propr1c1 != propr1c6 && propr1c1 != propr1c7 && propr1c1 != propr1c8 && propr1c1 != propr1c9 &&
+        propr1c2 != propr1c3 && propr1c2 != propr1c4 && propr1c2 != propr1c5 && propr1c2 != propr1c6 && propr1c2 != propr1c7 && propr1c2 != propr1c8 && propr1c2 != propr1c9 &&
+        propr1c3 != propr1c4 && propr1c3 != propr1c5 && propr1c3 != propr1c6 && propr1c3 != propr1c7 && propr1c3 != propr1c8 && propr1c3 != propr1c9 &&
+        propr1c4 != propr1c5 && propr1c4 != propr1c6 && propr1c4 != propr1c7 && propr1c4 != propr1c8 && propr1c4 != propr1c9 &&
+        propr1c5 != propr1c6 && propr1c5 != propr1c7 && propr1c5 != propr1c8 && propr1c5 != propr1c9 &&
+        propr1c6 != propr1c7 && propr1c6 != propr1c8 && propr1c6 != propr1c9 &&
+        propr1c7 != propr1c8 && propr1c7 != propr1c9 &&
+        propr1c8 != propr1c9 &&
+        propr2c1 != propr2c2 && propr2c1 != propr2c3 && propr2c1 != propr2c4 && propr2c1 != propr2c5 && propr2c1 != propr2c6 && propr2c1 != propr2c7 && propr2c1 != propr2c8 && propr2c1 != propr2c9 &&
+        propr2c2 != propr2c3 && propr2c2 != propr2c4 && propr2c2 != propr2c5 && propr2c2 != propr2c6 && propr2c2 != propr2c7 && propr2c2 != propr2c8 && propr2c2 != propr2c9 &&
+        propr2c3 != propr2c4 && propr2c3 != propr2c5 && propr2c3 != propr2c6 && propr2c3 != propr2c7 && propr2c3 != propr2c8 && propr2c3 != propr2c9 &&
+        propr2c4 != propr2c5 && propr2c4 != propr2c6 && propr2c4 != propr2c7 && propr2c4 != propr2c8 && propr2c4 != propr2c9 &&
+        propr2c5 != propr2c6 && propr2c5 != propr2c7 && propr2c5 != propr2c8 && propr2c5 != propr2c9 &&
+        propr2c6 != propr2c7 && propr2c6 != propr2c8 && propr2c6 != propr2c9 &&
+        propr2c7 != propr2c8 && propr2c7 != propr2c9 &&
+        propr2c8 != propr2c9 &&
+        propr3c1 != propr3c2 && propr3c1 != propr3c3 && propr3c1 != propr3c4 && propr3c1 != propr3c5 && propr3c1 != propr3c6 && propr3c1 != propr3c7 && propr3c1 != propr3c8 && propr3c1 != propr3c9 &&
+        propr3c2 != propr3c3 && propr3c2 != propr3c4 && propr3c2 != propr3c5 && propr3c2 != propr3c6 && propr3c2 != propr3c7 && propr3c2 != propr3c8 && propr3c2 != propr3c9 &&
+        propr3c3 != propr3c4 && propr3c3 != propr3c5 && propr3c3 != propr3c6 && propr3c3 != propr3c7 && propr3c3 != propr3c8 && propr3c3 != propr3c9 &&
+        propr3c4 != propr3c5 && propr3c4 != propr3c6 && propr3c4 != propr3c7 && propr3c4 != propr3c8 && propr3c4 != propr3c9 &&
+        propr3c5 != propr3c6 && propr3c5 != propr3c7 && propr3c5 != propr3c8 && propr3c5 != propr3c9 &&
+        propr3c6 != propr3c7 && propr3c6 != propr3c8 && propr3c6 != propr3c9 &&
+        propr3c7 != propr3c8 && propr3c7 != propr3c9 &&
+        propr3c8 != propr3c9 &&
+        propr4c1 != propr4c2 && propr4c1 != propr4c3 && propr4c1 != propr4c4 && propr4c1 != propr4c5 && propr4c1 != propr4c6 && propr4c1 != propr4c7 && propr4c1 != propr4c8 && propr4c1 != propr4c9 &&
+        propr4c2 != propr4c3 && propr4c2 != propr4c4 && propr4c2 != propr4c5 && propr4c2 != propr4c6 && propr4c2 != propr4c7 && propr4c2 != propr4c8 && propr4c2 != propr4c9 &&
+        propr4c3 != propr4c4 && propr4c3 != propr4c5 && propr4c3 != propr4c6 && propr4c3 != propr4c7 && propr4c3 != propr4c8 && propr4c3 != propr4c9 &&
+        propr4c4 != propr4c5 && propr4c4 != propr4c6 && propr4c4 != propr4c7 && propr4c4 != propr4c8 && propr4c4 != propr4c9 &&
+        propr4c5 != propr4c6 && propr4c5 != propr4c7 && propr4c5 != propr4c8 && propr4c5 != propr4c9 &&
+        propr4c6 != propr4c7 && propr4c6 != propr4c8 && propr4c6 != propr4c9 &&
+        propr4c7 != propr4c8 && propr4c7 != propr4c9 &&
+        propr4c8 != propr4c9 &&
+        propr5c1 != propr5c2 && propr5c1 != propr5c3 && propr5c1 != propr5c4 && propr5c1 != propr5c5 && propr5c1 != propr5c6 && propr5c1 != propr5c7 && propr5c1 != propr5c8 && propr5c1 != propr5c9 &&
+        propr5c2 != propr5c3 && propr5c2 != propr5c4 && propr5c2 != propr5c5 && propr5c2 != propr5c6 && propr5c2 != propr5c7 && propr5c2 != propr5c8 && propr5c2 != propr5c9 &&
+        propr5c3 != propr5c4 && propr5c3 != propr5c5 && propr5c3 != propr5c6 && propr5c3 != propr5c7 && propr5c3 != propr5c8 && propr5c3 != propr5c9 &&
+        propr5c4 != propr5c5 && propr5c4 != propr5c6 && propr5c4 != propr5c7 && propr5c4 != propr5c8 && propr5c4 != propr5c9 &&
+        propr5c5 != propr5c6 && propr5c5 != propr5c7 && propr5c5 != propr5c8 && propr5c5 != propr5c9 &&
+        propr5c6 != propr5c7 && propr5c6 != propr5c8 && propr5c6 != propr5c9 &&
+        propr5c7 != propr5c8 && propr5c7 != propr5c9 &&
+        propr5c8 != propr5c9 &&
+        propr6c1 != propr6c2 && propr6c1 != propr6c3 && propr6c1 != propr6c4 && propr6c1 != propr6c5 && propr6c1 != propr6c6 && propr6c1 != propr6c7 && propr6c1 != propr6c8 && propr6c1 != propr6c9 &&
+        propr6c2 != propr6c3 && propr6c2 != propr6c4 && propr6c2 != propr6c5 && propr6c2 != propr6c6 && propr6c2 != propr6c7 && propr6c2 != propr6c8 && propr6c2 != propr6c9 &&
+        propr6c3 != propr6c4 && propr6c3 != propr6c5 && propr6c3 != propr6c6 && propr6c3 != propr6c7 && propr6c3 != propr6c8 && propr6c3 != propr6c9 &&
+        propr6c4 != propr6c5 && propr6c4 != propr6c6 && propr6c4 != propr6c7 && propr6c4 != propr6c8 && propr6c4 != propr6c9 &&
+        propr6c5 != propr6c6 && propr6c5 != propr6c7 && propr6c5 != propr6c8 && propr6c5 != propr6c9 &&
+        propr6c6 != propr6c7 && propr6c6 != propr6c8 && propr6c6 != propr6c9 &&
+        propr6c7 != propr6c8 && propr6c7 != propr6c9 &&
+        propr6c8 != propr6c9 &&
+        propr7c1 != propr7c2 && propr7c1 != propr7c3 && propr7c1 != propr7c4 && propr7c1 != propr7c5 && propr7c1 != propr7c6 && propr7c1 != propr7c7 && propr7c1 != propr7c8 && propr7c1 != propr7c9 &&
+        propr7c2 != propr7c3 && propr7c2 != propr7c4 && propr7c2 != propr7c5 && propr7c2 != propr7c6 && propr7c2 != propr7c7 && propr7c2 != propr7c8 && propr7c2 != propr7c9 &&
+        propr7c3 != propr7c4 && propr7c3 != propr7c5 && propr7c3 != propr7c6 && propr7c3 != propr7c7 && propr7c3 != propr7c8 && propr7c3 != propr7c9 &&
+        propr7c4 != propr7c5 && propr7c4 != propr7c6 && propr7c4 != propr7c7 && propr7c4 != propr7c8 && propr7c4 != propr7c9 &&
+        propr7c5 != propr7c6 && propr7c5 != propr7c7 && propr7c5 != propr7c8 && propr7c5 != propr7c9 &&
+        propr7c6 != propr7c7 && propr7c6 != propr7c8 && propr7c6 != propr7c9 &&
+        propr7c7 != propr7c8 && propr7c7 != propr7c9 &&
+        propr7c8 != propr7c9 &&
+        propr8c1 != propr8c2 && propr8c1 != propr8c3 && propr8c1 != propr8c4 && propr8c1 != propr8c5 && propr8c1 != propr8c6 && propr8c1 != propr8c7 && propr8c1 != propr8c8 && propr8c1 != propr8c9 &&
+        propr8c2 != propr8c3 && propr8c2 != propr8c4 && propr8c2 != propr8c5 && propr8c2 != propr8c6 && propr8c2 != propr8c7 && propr8c2 != propr8c8 && propr8c2 != propr8c9 &&
+        propr8c3 != propr8c4 && propr8c3 != propr8c5 && propr8c3 != propr8c6 && propr8c3 != propr8c7 && propr8c3 != propr8c8 && propr8c3 != propr8c9 &&
+        propr8c4 != propr8c5 && propr8c4 != propr8c6 && propr8c4 != propr8c7 && propr8c4 != propr8c8 && propr8c4 != propr8c9 &&
+        propr8c5 != propr8c6 && propr8c5 != propr8c7 && propr8c5 != propr8c8 && propr8c5 != propr8c9 &&
+        propr8c6 != propr8c7 && propr8c6 != propr8c8 && propr8c6 != propr8c9 &&
+        propr8c7 != propr8c8 && propr8c7 != propr8c9 &&
+        propr8c8 != propr8c9 &&
+        propr9c1 != propr9c2 && propr9c1 != propr9c3 && propr9c1 != propr9c4 && propr9c1 != propr9c5 && propr9c1 != propr9c6 && propr9c1 != propr9c7 && propr9c1 != propr9c8 && propr9c1 != propr9c9 &&
+        propr9c2 != propr9c3 && propr9c2 != propr9c4 && propr9c2 != propr9c5 && propr9c2 != propr9c6 && propr9c2 != propr9c7 && propr9c2 != propr9c8 && propr9c2 != propr9c9 &&
+        propr9c3 != propr9c4 && propr9c3 != propr9c5 && propr9c3 != propr9c6 && propr9c3 != propr9c7 && propr9c3 != propr9c8 && propr9c3 != propr9c9 &&
+        propr9c4 != propr9c5 && propr9c4 != propr9c6 && propr9c4 != propr9c7 && propr9c4 != propr9c8 && propr9c4 != propr9c9 &&
+        propr9c5 != propr9c6 && propr9c5 != propr9c7 && propr9c5 != propr9c8 && propr9c5 != propr9c9 &&
+        propr9c6 != propr9c7 && propr9c6 != propr9c8 && propr9c6 != propr9c9 &&
+        propr9c7 != propr9c8 && propr9c7 != propr9c9 &&
+        propr9c8 != propr9c9 &&
+        propr1c1 != propr2c1 && propr1c1 != propr3c1 && propr1c1 != propr4c1 && propr1c1 != propr5c1 && propr1c1 != propr6c1 && propr1c1 != propr7c1 && propr1c1 != propr8c1 && propr1c1 != propr9c1 &&
+        propr2c1 != propr3c1 && propr2c1 != propr4c1 && propr2c1 != propr5c1 && propr2c1 != propr6c1 && propr2c1 != propr7c1 && propr2c1 != propr8c1 && propr2c1 != propr9c1 &&
+        propr3c1 != propr4c1 && propr3c1 != propr5c1 && propr3c1 != propr6c1 && propr3c1 != propr7c1 && propr3c1 != propr8c1 && propr3c1 != propr9c1 &&
+        propr4c1 != propr5c1 && propr4c1 != propr6c1 && propr4c1 != propr7c1 && propr4c1 != propr8c1 && propr4c1 != propr9c1 &&
+        propr5c1 != propr6c1 && propr5c1 != propr7c1 && propr5c1 != propr8c1 && propr5c1 != propr9c1 &&
+        propr6c1 != propr7c1 && propr6c1 != propr8c1 && propr6c1 != propr9c1 &&
+        propr7c1 != propr8c1 && propr7c1 != propr9c1 &&
+        propr8c1 != propr9c1 &&
+        propr1c2 != propr2c2 && propr1c2 != propr3c2 && propr1c2 != propr4c2 && propr1c2 != propr5c2 && propr1c2 != propr6c2 && propr1c2 != propr7c2 && propr1c2 != propr8c2 && propr1c2 != propr9c2 &&
+        propr2c2 != propr3c2 && propr2c2 != propr4c2 && propr2c2 != propr5c2 && propr2c2 != propr6c2 && propr2c2 != propr7c2 && propr2c2 != propr8c2 && propr2c2 != propr9c2 &&
+        propr3c2 != propr4c2 && propr3c2 != propr5c2 && propr3c2 != propr6c2 && propr3c2 != propr7c2 && propr3c2 != propr8c2 && propr3c2 != propr9c2 &&
+        propr4c2 != propr5c2 && propr4c2 != propr6c2 && propr4c2 != propr7c2 && propr4c2 != propr8c2 && propr4c2 != propr9c2 &&
+        propr5c2 != propr6c2 && propr5c2 != propr7c2 && propr5c2 != propr8c2 && propr5c2 != propr9c2 &&
+        propr6c2 != propr7c2 && propr6c2 != propr8c2 && propr6c2 != propr9c2 &&
+        propr7c2 != propr8c2 && propr7c2 != propr9c2 &&
+        propr8c2 != propr9c2 &&
+        propr1c3 != propr2c3 && propr1c3 != propr3c3 && propr1c3 != propr4c3 && propr1c3 != propr5c3 && propr1c3 != propr6c3 && propr1c3 != propr7c3 && propr1c3 != propr8c3 && propr1c3 != propr9c3 &&
+        propr2c3 != propr3c3 && propr2c3 != propr4c3 && propr2c3 != propr5c3 && propr2c3 != propr6c3 && propr2c3 != propr7c3 && propr2c3 != propr8c3 && propr2c3 != propr9c3 &&
+        propr3c3 != propr4c3 && propr3c3 != propr5c3 && propr3c3 != propr6c3 && propr3c3 != propr7c3 && propr3c3 != propr8c3 && propr3c3 != propr9c3 &&
+        propr4c3 != propr5c3 && propr4c3 != propr6c3 && propr4c3 != propr7c3 && propr4c3 != propr8c3 && propr4c3 != propr9c3 &&
+        propr5c3 != propr6c3 && propr5c3 != propr7c3 && propr5c3 != propr8c3 && propr5c3 != propr9c3 &&
+        propr6c3 != propr7c3 && propr6c3 != propr8c3 && propr6c3 != propr9c3 &&
+        propr7c3 != propr8c3 && propr7c3 != propr9c3 &&
+        propr8c3 != propr9c3 &&
+        propr1c4 != propr2c4 && propr1c4 != propr3c4 && propr1c4 != propr4c4 && propr1c4 != propr5c4 && propr1c4 != propr6c4 && propr1c4 != propr7c4 && propr1c4 != propr8c4 && propr1c4 != propr9c4 &&
+        propr2c4 != propr3c4 && propr2c4 != propr4c4 && propr2c4 != propr5c4 && propr2c4 != propr6c4 && propr2c4 != propr7c4 && propr2c4 != propr8c4 && propr2c4 != propr9c4 &&
+        propr3c4 != propr4c4 && propr3c4 != propr5c4 && propr3c4 != propr6c4 && propr3c4 != propr7c4 && propr3c4 != propr8c4 && propr3c4 != propr9c4 &&
+        propr4c4 != propr5c4 && propr4c4 != propr6c4 && propr4c4 != propr7c4 && propr4c4 != propr8c4 && propr4c4 != propr9c4 &&
+        propr5c4 != propr6c4 && propr5c4 != propr7c4 && propr5c4 != propr8c4 && propr5c4 != propr9c4 &&
+        propr6c4 != propr7c4 && propr6c4 != propr8c4 && propr6c4 != propr9c4 &&
+        propr7c4 != propr8c4 && propr7c4 != propr9c4 &&
+        propr8c4 != propr9c4 &&
+        propr1c5 != propr2c5 && propr1c5 != propr3c5 && propr1c5 != propr4c5 && propr1c5 != propr5c5 && propr1c5 != propr6c5 && propr1c5 != propr7c5 && propr1c5 != propr8c5 && propr1c5 != propr9c5 &&
+        propr2c5 != propr3c5 && propr2c5 != propr4c5 && propr2c5 != propr5c5 && propr2c5 != propr6c5 && propr2c5 != propr7c5 && propr2c5 != propr8c5 && propr2c5 != propr9c5 &&
+        propr3c5 != propr4c5 && propr3c5 != propr5c5 && propr3c5 != propr6c5 && propr3c5 != propr7c5 && propr3c5 != propr8c5 && propr3c5 != propr9c5 &&
+        propr4c5 != propr5c5 && propr4c5 != propr6c5 && propr4c5 != propr7c5 && propr4c5 != propr8c5 && propr4c5 != propr9c5 &&
+        propr5c5 != propr6c5 && propr5c5 != propr7c5 && propr5c5 != propr8c5 && propr5c5 != propr9c5 &&
+        propr6c5 != propr7c5 && propr6c5 != propr8c5 && propr6c5 != propr9c5 &&
+        propr7c5 != propr8c5 && propr7c5 != propr9c5 &&
+        propr8c5 != propr9c5 &&
+        propr1c6 != propr2c6 && propr1c6 != propr3c6 && propr1c6 != propr4c6 && propr1c6 != propr5c6 && propr1c6 != propr6c6 && propr1c6 != propr7c6 && propr1c6 != propr8c6 && propr1c6 != propr9c6 &&
+        propr2c6 != propr3c6 && propr2c6 != propr4c6 && propr2c6 != propr5c6 && propr2c6 != propr6c6 && propr2c6 != propr7c6 && propr2c6 != propr8c6 && propr2c6 != propr9c6 &&
+        propr3c6 != propr4c6 && propr3c6 != propr5c6 && propr3c6 != propr6c6 && propr3c6 != propr7c6 && propr3c6 != propr8c6 && propr3c6 != propr9c6 &&
+        propr4c6 != propr5c6 && propr4c6 != propr6c6 && propr4c6 != propr7c6 && propr4c6 != propr8c6 && propr4c6 != propr9c6 &&
+        propr5c6 != propr6c6 && propr5c6 != propr7c6 && propr5c6 != propr8c6 && propr5c6 != propr9c6 &&
+        propr6c6 != propr7c6 && propr6c6 != propr8c6 && propr6c6 != propr9c6 &&
+        propr7c6 != propr8c6 && propr7c6 != propr9c6 &&
+        propr8c6 != propr9c6 &&
+        propr1c7 != propr2c7 && propr1c7 != propr3c7 && propr1c7 != propr4c7 && propr1c7 != propr5c7 && propr1c7 != propr6c7 && propr1c7 != propr7c7 && propr1c7 != propr8c7 && propr1c7 != propr9c7 &&
+        propr2c7 != propr3c7 && propr2c7 != propr4c7 && propr2c7 != propr5c7 && propr2c7 != propr6c7 && propr2c7 != propr7c7 && propr2c7 != propr8c7 && propr2c7 != propr9c7 &&
+        propr3c7 != propr4c7 && propr3c7 != propr5c7 && propr3c7 != propr6c7 && propr3c7 != propr7c7 && propr3c7 != propr8c7 && propr3c7 != propr9c7 &&
+        propr4c7 != propr5c7 && propr4c7 != propr6c7 && propr4c7 != propr7c7 && propr4c7 != propr8c7 && propr4c7 != propr9c7 &&
+        propr5c7 != propr6c7 && propr5c7 != propr7c7 && propr5c7 != propr8c7 && propr5c7 != propr9c7 &&
+        propr6c7 != propr7c7 && propr6c7 != propr8c7 && propr6c7 != propr9c7 &&
+        propr7c7 != propr8c7 && propr7c7 != propr9c7 &&
+        propr8c7 != propr9c7 &&
+        propr1c8 != propr2c8 && propr1c8 != propr3c8 && propr1c8 != propr4c8 && propr1c8 != propr5c8 && propr1c8 != propr6c8 && propr1c8 != propr7c8 && propr1c8 != propr8c8 && propr1c8 != propr9c8 &&
+        propr2c8 != propr3c8 && propr2c8 != propr4c8 && propr2c8 != propr5c8 && propr2c8 != propr6c8 && propr2c8 != propr7c8 && propr2c8 != propr8c8 && propr2c8 != propr9c8 &&
+        propr3c8 != propr4c8 && propr3c8 != propr5c8 && propr3c8 != propr6c8 && propr3c8 != propr7c8 && propr3c8 != propr8c8 && propr3c8 != propr9c8 &&
+        propr4c8 != propr5c8 && propr4c8 != propr6c8 && propr4c8 != propr7c8 && propr4c8 != propr8c8 && propr4c8 != propr9c8 &&
+        propr5c8 != propr6c8 && propr5c8 != propr7c8 && propr5c8 != propr8c8 && propr5c8 != propr9c8 &&
+        propr6c8 != propr7c8 && propr6c8 != propr8c8 && propr6c8 != propr9c8 &&
+        propr7c8 != propr8c8 && propr7c8 != propr9c8 &&
+        propr8c8 != propr9c8 &&
+        propr1c9 != propr2c9 && propr1c9 != propr3c9 && propr1c9 != propr4c9 && propr1c9 != propr5c9 && propr1c9 != propr6c9 && propr1c9 != propr7c9 && propr1c9 != propr8c9 && propr1c9 != propr9c9 &&
+        propr2c9 != propr3c9 && propr2c9 != propr4c9 && propr2c9 != propr5c9 && propr2c9 != propr6c9 && propr2c9 != propr7c9 && propr2c9 != propr8c9 && propr2c9 != propr9c9 &&
+        propr3c9 != propr4c9 && propr3c9 != propr5c9 && propr3c9 != propr6c9 && propr3c9 != propr7c9 && propr3c9 != propr8c9 && propr3c9 != propr9c9 &&
+        propr4c9 != propr5c9 && propr4c9 != propr6c9 && propr4c9 != propr7c9 && propr4c9 != propr8c9 && propr4c9 != propr9c9 &&
+        propr5c9 != propr6c9 && propr5c9 != propr7c9 && propr5c9 != propr8c9 && propr5c9 != propr9c9 &&
+        propr6c9 != propr7c9 && propr6c9 != propr8c9 && propr6c9 != propr9c9 &&
+        propr7c9 != propr8c9 && propr7c9 != propr9c9 &&
+        propr8c9 != propr9c9 &&
+        propr1c1 != propr1c2 && propr1c1 != propr1c3 && propr1c1 != propr2c1 && propr1c1 != propr2c2 && propr1c1 != propr2c3 && propr1c1 != propr3c1 && propr1c1 != propr3c2 && propr1c1 != propr3c3 &&
+        propr1c4 != propr1c5 && propr1c4 != propr1c6 && propr1c4 != propr2c4 && propr1c4 != propr2c5 && propr1c4 != propr2c6 && propr1c4 != propr3c4 && propr1c4 != propr3c5 && propr1c4 != propr3c6 &&
+        propr1c7 != propr1c8 && propr1c7 != propr1c9 && propr1c7 != propr2c7 && propr1c7 != propr2c8 && propr1c7 != propr2c9 && propr1c7 != propr3c7 && propr1c7 != propr3c8 && propr1c7 != propr3c9 &&
+        propr4c1 != propr4c2 && propr4c1 != propr4c3 && propr4c1 != propr5c1 && propr4c1 != propr5c2 && propr4c1 != propr5c3 && propr4c1 != propr6c1 && propr4c1 != propr6c2 && propr4c1 != propr6c3 &&
+        propr4c4 != propr4c5 && propr4c4 != propr4c6 && propr4c4 != propr5c4 && propr4c4 != propr5c5 && propr4c4 != propr5c6 && propr4c4 != propr6c4 && propr4c4 != propr6c5 && propr4c4 != propr6c6 &&
+        propr4c7 != propr4c8 && propr4c7 != propr4c9 && propr4c7 != propr5c7 && propr4c7 != propr5c8 && propr4c7 != propr5c9 && propr4c7 != propr6c7 && propr4c7 != propr6c8 && propr4c7 != propr6c9 &&
+        propr7c1 != propr7c2 && propr7c1 != propr7c3 && propr7c1 != propr8c1 && propr7c1 != propr8c2 && propr7c1 != propr8c3 && propr7c1 != propr9c1 && propr7c1 != propr9c2 && propr7c1 != propr9c3 &&
+        propr7c4 != propr7c5 && propr7c4 != propr7c6 && propr7c4 != propr8c4 && propr7c4 != propr8c5 && propr7c4 != propr8c6 && propr7c4 != propr9c4 && propr7c4 != propr9c5 && propr7c4 != propr9c6 &&
+        propr7c7 != propr7c8 && propr7c7 != propr7c9 && propr7c7 != propr8c7 && propr7c7 != propr8c8 && propr7c7 != propr8c9 && propr7c7 != propr9c7 && propr7c7 != propr9c8 && propr7c7 != propr9c9 &&
+        (propr1c1 + propr1c2 + propr1c3 + propr2c1 + propr2c2 + propr2c3 + propr3c1 + propr3c2 + propr3c3 == 45u8) && (propr1c4 + propr1c5 + propr1c6 + propr2c4 + propr2c5 + propr2c6 + propr3c4 + propr3c5 + propr3c6 == 45u8) && (propr1c7 + propr1c8 + propr1c9 + propr2c7 + propr2c8 + propr2c9 + propr3c7 + propr3c8 + propr3c9 == 45u8) &&
+        (propr4c1 + propr4c2 + propr4c3 + propr5c1 + propr5c2 + propr5c3 + propr6c1 + propr6c2 + propr6c3 == 45u8) && (propr4c4 + propr4c5 + propr4c6 + propr5c4 + propr5c5 + propr5c6 + propr6c4 + propr6c5 + propr6c6 == 45u8) && (propr4c7 + propr4c8 + propr4c9 + propr5c7 + propr5c8 + propr5c9 + propr6c7 + propr6c8 + propr6c9 == 45u8) &&
+        (propr7c1 + propr7c2 + propr7c3 + propr8c1 + propr8c2 + propr8c3 + propr9c1 + propr9c2 + propr9c3 == 45u8) && (propr7c4 + propr7c5 + propr7c6 + propr8c4 + propr8c5 + propr8c6 + propr9c4 + propr9c5 + propr9c6 == 45u8) && (propr7c7 + propr7c8 + propr7c9 + propr8c7 + propr8c8 + propr8c9 + propr9c7 + propr9c8 + propr9c9 == 45u8) &&
+        (propr1c1 + propr1c2 + propr1c3 + propr1c4 + propr1c5 + propr1c6 + propr1c7 + propr1c8 + propr1c9 == 45u8) && (propr2c1 + propr2c2 + propr2c3 + propr2c4 + propr2c5 + propr2c6 + propr2c7 + propr2c8 + propr2c9 == 45u8) && (propr3c1 + propr3c2 + propr3c3 + propr3c4 + propr3c5 + propr3c6 + propr3c7 + propr3c8 + propr3c9 == 45u8) &&
+        (propr4c1 + propr4c2 + propr4c3 + propr4c4 + propr4c5 + propr4c6 + propr4c7 + propr4c8 + propr4c9 == 45u8) && (propr5c1 + propr5c2 + propr5c3 + propr5c4 + propr5c5 + propr5c6 + propr5c7 + propr5c8 + propr5c9 == 45u8) && (propr6c1 + propr6c2 + propr6c3 + propr6c4 + propr6c5 + propr6c6 + propr6c7 + propr6c8 + propr6c9 == 45u8) &&
+        (propr7c1 + propr7c2 + propr7c3 + propr7c4 + propr7c5 + propr7c6 + propr7c7 + propr7c8 + propr7c9 == 45u8) && (propr8c1 + propr8c2 + propr8c3 + propr8c4 + propr8c5 + propr8c6 + propr8c7 + propr8c8 + propr8c9 == 45u8) && (propr9c1 + propr9c2 + propr9c3 + propr9c4 + propr9c5 + propr9c6 + propr9c7 + propr9c8 + propr9c9 == 45u8) &&
+        (propr1c1 + propr2c1 + propr3c1 + propr4c1 + propr5c1 + propr6c1 + propr7c1 + propr8c1 + propr9c1 == 45u8) && (propr1c2 + propr2c2 + propr3c2 + propr4c2 + propr5c2 + propr6c2 + propr7c2 + propr8c2 + propr9c2 == 45u8) && (propr1c3 + propr2c3 + propr3c3 + propr4c3 + propr5c3 + propr6c3 + propr7c3 + propr8c3 + propr9c3 == 45u8) &&
+        (propr1c4 + propr2c4 + propr3c4 + propr4c4 + propr5c4 + propr6c4 + propr7c4 + propr8c4 + propr9c4 == 45u8) && (propr1c5 + propr2c5 + propr3c5 + propr4c5 + propr5c5 + propr6c5 + propr7c5 + propr8c5 + propr9c5 == 45u8) && (propr1c6 + propr2c6 + propr3c6 + propr4c6 + propr5c6 + propr6c6 + propr7c6 + propr8c6 + propr9c6 == 45u8) &&
+        (propr1c7 + propr2c7 + propr3c7 + propr4c7 + propr5c7 + propr6c7 + propr7c7 + propr8c7 + propr9c7 == 45u8) && (propr1c8 + propr2c8 + propr3c8 + propr4c8 + propr5c8 + propr6c8 + propr7c8 + propr8c8 + propr9c8 == 45u8) && (propr1c9 + propr2c9 + propr3c9 + propr4c9 + propr5c9 + propr6c9 + propr7c9 + propr8c9 + propr9c9 == 45u8) 
+
+
+
+
+
+
+    );
 
    }
 
