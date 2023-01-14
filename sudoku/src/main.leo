@@ -6,11 +6,12 @@ program sudoku.leo {
 
     // Returns true if the puzzle is solved and valid, false otherwise.
 // Returns true if the puzzle is solved and valid, false otherwise.
+// Returns true if the puzzle is solved and valid, false otherwise.
 transition is_valid_solution(puzzle: Puzzle) -> bool {
     // Check if all cells contain a number between 1 and 9
     for i : 0u8..9u8 {
         for j : 0u8..9u8 {
-            if puzzle.cells[i][j] < 1u8 || puzzle.cells[i][j] > 9u8 {
+            if puzzle.cells[i as usize][j as usize] < 1u8 || puzzle.cells[i as usize][j as usize] > 9u8 {
                 return false;
             }
         }
@@ -20,10 +21,10 @@ transition is_valid_solution(puzzle: Puzzle) -> bool {
     for i : 0u8..9u8 {
         let mut set = [false; 9];
         for j : 0u8..9u8 {
-            if set[puzzle.cells[i][j] as usize - 1] {
+            if set[puzzle.cells[i as usize][j as usize] as usize - 1] {
                 return false;
             }
-            set[puzzle.cells[i][j] as usize - 1] = true;
+            set[puzzle.cells[i as usize][j as usize] as usize - 1] = true;
         }
     }
 
@@ -31,10 +32,10 @@ transition is_valid_solution(puzzle: Puzzle) -> bool {
     for j : 0u8..9u8 {
         let mut set = [false; 9];
         for i : 0u8..9u8 {
-            if set[puzzle.cells[i][j] as usize - 1] {
+            if set[puzzle.cells[i as usize][j as usize] as usize - 1] {
                 return false;
             }
-            set[puzzle.cells[i][j] as usize - 1] = true;
+            set[puzzle.cells[i as usize][j as usize] as usize - 1] = true;
         }
     }
 
@@ -46,10 +47,10 @@ transition is_valid_solution(puzzle: Puzzle) -> bool {
                 for l : 0u8..3u8 {
                     let row = i * 3 + k;
                     let col = j * 3 + l;
-                    if set[puzzle.cells[row][col] as usize - 1] {
+                    if set[puzzle.cells[row as usize][col as usize] as usize - 1] {
                         return false;
                     }
-                    set[puzzle.cells[row][col] as usize - 1] = true;
+                    set[puzzle.cells[row as usize][col as usize] as usize - 1] = true;
                 }
             }
         }
@@ -57,6 +58,7 @@ transition is_valid_solution(puzzle: Puzzle) -> bool {
 
     return true;
 }
+
 
 
 }
