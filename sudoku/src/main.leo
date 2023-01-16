@@ -9,7 +9,7 @@ program sudoku.leo {
         // Check if all cells contain a number between 1 and 9
         for i : 0u8..9u8 {
             for j : 0u8..9u8 {
-                if puzzle.cells[i][j] < 1 || puzzle.cells[i][j] > 9 {
+                if puzzle.cells[i][j] < 1u8 || puzzle.cells[i][j] > 9u8 {
                     return false;
                 }
             }
