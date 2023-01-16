@@ -17,7 +17,7 @@ program sudoku.leo {
 
         // Check if each row contains unique numbers
         for i : 0u8..9u8 {
-            let mut set = [false; 9];
+            let mut set : [false; 9];
             for j : 0u8..9u8 {
                 if set[(puzzle.cells[i][j] as usize) - 1] {
                     return false;
@@ -28,7 +28,7 @@ program sudoku.leo {
 
         // Check if each column contains unique numbers
         for j : 0u8..9u8 {
-            let mut set = [false; 9];
+            let mut set : [false; 9];
             for i : 0u8..9u8 {
                 if set[(puzzle.cells[i][j] as usize) - 1] {
                     return false;
@@ -40,11 +40,11 @@ program sudoku.leo {
         // Check if each 3x3 square contains unique numbers
         for i : 0u8..3u8 {
             for j : 0u8..3u8 {
-                let mut set = [false; 9];
+                let mut set : [false; 9];
                 for k : 0u8..3u8 {
                     for l : 0u8..3u8 {
-                        let row = i * 3 + k;
-                        let col = j * 3 + l;
+                        let row : i * 3 + k;
+                        let col : j * 3 + l;
                         if set[(puzzle.cells[row][col] as usize) - 1] {
                             return false;
                         }
