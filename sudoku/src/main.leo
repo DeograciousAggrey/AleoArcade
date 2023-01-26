@@ -20,10 +20,10 @@ transition is_valid_solution(puzzle: Puzzle) -> bool {
     for i : 0u8..9u8 {
         let mut set : [false; 9];
         for j : 0u8..9u8 {
-            if set[puzzle.cells[i][j]as usize - 1] {
+            if set[puzzle.cells[i][j] as usize - 1]  {
                 return false;
             }
-            set[puzzle.cells[i][j] as usize - 1] = true;
+            set[puzzle.cells[i][j] as usize - 1] == true;
         }
     }
 
