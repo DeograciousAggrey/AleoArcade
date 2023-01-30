@@ -60,6 +60,33 @@ program sudoku.leo {
         }   
 
 
+        //Check that the solved board is the initial state of the unsolved board
+        //If a cell in the unsolved board is not 0, then the corresponding cell in the solved board must be equal to the cell in the unsolved board
+        //If a cell in the unsolved board is 0, then the corresponding cell in the solved board must be different from the cell in the unsolved board
+        //Unpack the components of the unsolved board into a 2D array
+
+        let unsolvedBoardArray:u8 = [unsolvedBoard.r1.c1, unsolvedBoard.r1.c2, unsolvedBoard.r1.c3, unsolvedBoard.r1.c4, unsolvedBoard.r1.c5, unsolvedBoard.r1.c6, unsolvedBoard.r1.c7, unsolvedBoard.r1.c8, unsolvedBoard.r1.c9,
+                                    unsolvedBoard.r2.c1, unsolvedBoard.r2.c2, unsolvedBoard.r2.c3, unsolvedBoard.r2.c4, unsolvedBoard.r2.c5, unsolvedBoard.r2.c6, unsolvedBoard.r2.c7, unsolvedBoard.r2.c8, unsolvedBoard.r2.c9,
+                                    unsolvedBoard.r3.c1, unsolvedBoard.r3.c2, unsolvedBoard.r3.c3, unsolvedBoard.r3.c4, unsolvedBoard.r3.c5, unsolvedBoard.r3.c6, unsolvedBoard.r3.c7, unsolvedBoard.r3.c8, unsolvedBoard.r3.c9,
+                                    unsolvedBoard.r4.c1, unsolvedBoard.r4.c2, unsolvedBoard.r4.c3, unsolvedBoard.r4.c4, unsolvedBoard.r4.c5, unsolvedBoard.r4.c6, unsolvedBoard.r4.c7, unsolvedBoard.r4.c8, unsolvedBoard.r4.c9,
+                                    unsolvedBoard.r5.c1, unsolvedBoard.r5.c2, unsolvedBoard.r5.c3, unsolvedBoard.r5.c4, unsolvedBoard.r5.c5, unsolvedBoard.r5.c6, unsolvedBoard.r5.c7, unsolvedBoard.r5.c8, unsolvedBoard.r5.c9,
+                                    unsolvedBoard.r6.c1, unsolvedBoard.r6.c2, unsolvedBoard.r6.c3, unsolvedBoard.r6.c4, unsolvedBoard.r6.c5, unsolvedBoard.r6.c6, unsolvedBoard.r6.c7, unsolvedBoard.r6.c8, unsolvedBoard.r6.c9,
+                                    unsolvedBoard.r7.c1, unsolvedBoard.r7.c2, unsolvedBoard.r7.c3, unsolvedBoard.r7.c4, unsolvedBoard.r7.c5, unsolvedBoard.r7.c6, unsolvedBoard.r7.c7, unsolvedBoard.r7.c8, unsolvedBoard.r7.c9,
+                                    unsolvedBoard.r8.c1, unsolvedBoard.r8.c2, unsolvedBoard.r8.c3, unsolvedBoard.r8.c4, unsolvedBoard.r8.c5, unsolvedBoard.r8.c6, unsolvedBoard.r8.c7, unsolvedBoard.r8.c8, unsolvedBoard.r8.c9,
+                                    unsolvedBoard.r9.c1, unsolvedBoard.r9.c2, unsolvedBoard.r9.c3, unsolvedBoard.r9.c4, unsolvedBoard.r9.c5, unsolvedBoard.r9.c6, unsolvedBoard.r9.c7, unsolvedBoard.r9.c8, unsolvedBoard.r9.c9];
+                                    
+        //Loop to ensure that the solved board is the initial state of the unsolved board
+        for i: u8 in 0u8..81u8 {
+            if unsolvedBoardArray[i] != 0u8 {
+                if solvedBoardArray[i] != unsolvedBoardArray[i] {
+                    return false;
+                }
+            } else {
+                if solvedBoardArray[i] == unsolvedBoardArray[i] {
+                    return false;
+                }
+            }
+        }
 
 
 
@@ -79,7 +106,6 @@ program sudoku.leo {
 
 
 
-        
 
 
         
