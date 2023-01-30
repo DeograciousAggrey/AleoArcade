@@ -15,6 +15,21 @@ program sudoku.leo {
             c9: u8,
         }
 
+        //Define a Sudoku Board
+        //Use a struct
+        //Each board has 9 rows
+
+        struct Board {
+            r1: Row,
+            r2: Row,
+            r3: Row,
+            r4: Row,
+            r5: Row,
+            r6: Row,
+            r7: Row,
+            r8: Row,
+            r9: Row,
+        }
 
 
 }
