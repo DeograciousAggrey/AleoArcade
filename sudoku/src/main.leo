@@ -32,4 +32,17 @@ program sudoku.leo {
         }
 
 
+        //A transition function called is_valid_solution 
+        //Takes two boards as input unsolved and solved
+        // The transition function returns true if the solved board is a valid solution to the unsolved board
+
+        transition is_valid_solution (unsolvedBoard: Board, solvedBoard: Board) -> bool {
+        
+
+
+        
+        return true;
+        }
+
+
 }
