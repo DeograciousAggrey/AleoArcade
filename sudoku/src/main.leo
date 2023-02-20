@@ -327,6 +327,56 @@ program sudoku.leo {
                     }
                 }
 
+        let solvedBoardCol6:u8 = [solvedBoard.r1.c6, solvedBoard.r2.c6, solvedBoard.r3.c6, solvedBoard.r4.c6, solvedBoard.r5.c6, solvedBoard.r6.c6, solvedBoard.r7.c6, solvedBoard.r8.c6, solvedBoard.r9.c6];
+                    //Check that the elements in this column are unique
+                for i: u8 in 0u8..8u8 {
+                    for j: u8 in 0u8..8u8 {
+                        if i != j {
+                            if solvedBoardCol6[i] == solvedBoardCol6[j] {
+                                return false;
+                            }
+                        }
+                    }
+                }
+        
+        let solvedBoardCol7:u8 = [solvedBoard.r1.c7, solvedBoard.r2.c7, solvedBoard.r3.c7, solvedBoard.r4.c7, solvedBoard.r5.c7, solvedBoard.r6.c7, solvedBoard.r7.c7, solvedBoard.r8.c7, solvedBoard.r9.c7];
+                    //Check that the elements in this column are unique
+                for i: u8 in 0u8..8u8 {
+                    for j: u8 in 0u8..8u8 {
+                        if i != j {
+                            if solvedBoardCol7[i] == solvedBoardCol7[j] {
+                                return false;
+                            }
+                        }
+                    }
+                }
+
+        let solvedBoardCol8:u8 = [solvedBoard.r1.c8, solvedBoard.r2.c8, solvedBoard.r3.c8, solvedBoard.r4.c8, solvedBoard.r5.c8, solvedBoard.r6.c8, solvedBoard.r7.c8, solvedBoard.r8.c8, solvedBoard.r9.c8];
+                    //Check that the elements in this column are unique
+                for i: u8 in 0u8..8u8 {
+                    for j: u8 in 0u8..8u8 {
+                        if i != j {
+                            if solvedBoardCol8[i] == solvedBoardCol8[j] {
+                                return false;
+                            }
+                        }
+                    }
+                }
+
+
+
+        let solvedBoardCol9:u8 = [solvedBoard.r1.c9, solvedBoard.r2.c9, solvedBoard.r3.c9, solvedBoard.r4.c9, solvedBoard.r5.c9, solvedBoard.r6.c9, solvedBoard.r7.c9, solvedBoard.r8.c9, solvedBoard.r9.c9];
+                    //Check that the elements in this column are unique
+                for i: u8 in 0u8..8u8 {
+                    for j: u8 in 0u8..8u8 {
+                        if i != j {
+                            if solvedBoardCol9[i] == solvedBoardCol9[j] {
+                                return false;
+                            }
+                        }
+                    }
+                }
+
         
                     
                 
