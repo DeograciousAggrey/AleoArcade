@@ -93,6 +93,16 @@ program sudoku.leo {
         //It creates one-dimensional arrays of these components, one for each cell in the puzzle, and compares each cell to all the cells that precede it in the same row
         //so that all the cells in the same row must be different for the puzzle to be considered valid.
         // Don't use more than one loop for this task.
+        // Loop bound must be a literal
+        
+       
+
+
+
+       
+      
+
+
 
         
         
