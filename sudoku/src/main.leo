@@ -386,45 +386,56 @@ program sudoku.leo {
             {
                 return false;
             }
-            
+
         
         let solvedBoardCol7:u8 = [solvedBoard.r1.c7, solvedBoard.r2.c7, solvedBoard.r3.c7, solvedBoard.r4.c7, solvedBoard.r5.c7, solvedBoard.r6.c7, solvedBoard.r7.c7, solvedBoard.r8.c7, solvedBoard.r9.c7];
                     //Check that the elements in this column are unique
-                for i: u8 in 0u8..8u8 {
-                    for j: u8 in 0u8..8u8 {
-                        if i != j {
-                            if solvedBoardCol7[i] == solvedBoardCol7[j] {
-                                return false;
-                            }
-                        }
-                    }
-                }
+            
+            if(solvedBoardCol7[0] == solvedBoardCol7[1] || solvedBoardCol7[0] == solvedBoardCol7[2] || solvedBoardCol7[0] == solvedBoardCol7[3] || solvedBoardCol7[0] == solvedBoardCol7[4] || solvedBoardCol7[0] == solvedBoardCol7[5] || solvedBoardCol7[0] == solvedBoardCol7[6] || solvedBoardCol7[0] == solvedBoardCol7[7] || solvedBoardCol7[0] == solvedBoardCol7[8]
+            || solvedBoardCol7[1] == solvedBoardCol7[2] || solvedBoardCol7[1] == solvedBoardCol7[3] || solvedBoardCol7[1] == solvedBoardCol7[4] || solvedBoardCol7[1] == solvedBoardCol7[5] || solvedBoardCol7[1] == solvedBoardCol7[6] || solvedBoardCol7[1] == solvedBoardCol7[7] || solvedBoardCol7[1] == solvedBoardCol7[8]
+            || solvedBoardCol7[2] == solvedBoardCol7[3] || solvedBoardCol7[2] == solvedBoardCol7[4] || solvedBoardCol7[2] == solvedBoardCol7[5] || solvedBoardCol7[2] == solvedBoardCol7[6] || solvedBoardCol7[2] == solvedBoardCol7[7] || solvedBoardCol7[2] == solvedBoardCol7[8]
+            || solvedBoardCol7[3] == solvedBoardCol7[4] || solvedBoardCol7[3] == solvedBoardCol7[5] || solvedBoardCol7[3] == solvedBoardCol7[6] || solvedBoardCol7[3] == solvedBoardCol7[7] || solvedBoardCol7[3] == solvedBoardCol7[8]
+            || solvedBoardCol7[4] == solvedBoardCol7[5] || solvedBoardCol7[4] == solvedBoardCol7[6] || solvedBoardCol7[4] == solvedBoardCol7[7] || solvedBoardCol7[4] == solvedBoardCol7[8]
+            || solvedBoardCol7[5] == solvedBoardCol7[6] || solvedBoardCol7[5] == solvedBoardCol7[7] || solvedBoardCol7[5] == solvedBoardCol7[8]
+            || solvedBoardCol7[6] == solvedBoardCol7[7] || solvedBoardCol7[6] == solvedBoardCol7[8]
+            || solvedBoardCol7[7] == solvedBoardCol7[8]
+            ) 
+            {
+                return false;
+            }
 
         let solvedBoardCol8:u8 = [solvedBoard.r1.c8, solvedBoard.r2.c8, solvedBoard.r3.c8, solvedBoard.r4.c8, solvedBoard.r5.c8, solvedBoard.r6.c8, solvedBoard.r7.c8, solvedBoard.r8.c8, solvedBoard.r9.c8];
                     //Check that the elements in this column are unique
-                for i: u8 in 0u8..8u8 {
-                    for j: u8 in 0u8..8u8 {
-                        if i != j {
-                            if solvedBoardCol8[i] == solvedBoardCol8[j] {
-                                return false;
-                            }
-                        }
-                    }
-                }
+            if(solvedBoardCol8[0] == solvedBoardCol8[1] || solvedBoardCol8[0] == solvedBoardCol8[2] || solvedBoardCol8[0] == solvedBoardCol8[3] || solvedBoardCol8[0] == solvedBoardCol8[4] || solvedBoardCol8[0] == solvedBoardCol8[5] || solvedBoardCol8[0] == solvedBoardCol8[6] || solvedBoardCol8[0] == solvedBoardCol8[7] || solvedBoardCol8[0] == solvedBoardCol8[8]
+            || solvedBoardCol8[1] == solvedBoardCol8[2] || solvedBoardCol8[1] == solvedBoardCol8[3] || solvedBoardCol8[1] == solvedBoardCol8[4] || solvedBoardCol8[1] == solvedBoardCol8[5] || solvedBoardCol8[1] == solvedBoardCol8[6] || solvedBoardCol8[1] == solvedBoardCol8[7] || solvedBoardCol8[1] == solvedBoardCol8[8]
+            || solvedBoardCol8[2] == solvedBoardCol8[3] || solvedBoardCol8[2] == solvedBoardCol8[4] || solvedBoardCol8[2] == solvedBoardCol8[5] || solvedBoardCol8[2] == solvedBoardCol8[6] || solvedBoardCol8[2] == solvedBoardCol8[7] || solvedBoardCol8[2] == solvedBoardCol8[8]
+            || solvedBoardCol8[3] == solvedBoardCol8[4] || solvedBoardCol8[3] == solvedBoardCol8[5] || solvedBoardCol8[3] == solvedBoardCol8[6] || solvedBoardCol8[3] == solvedBoardCol8[7] || solvedBoardCol8[3] == solvedBoardCol8[8]
+            || solvedBoardCol8[4] == solvedBoardCol8[5] || solvedBoardCol8[4] == solvedBoardCol8[6] || solvedBoardCol8[4] == solvedBoardCol8[7] || solvedBoardCol8[4] == solvedBoardCol8[8]
+            || solvedBoardCol8[5] == solvedBoardCol8[6] || solvedBoardCol8[5] == solvedBoardCol8[7] || solvedBoardCol8[5] == solvedBoardCol8[8]
+            || solvedBoardCol8[6] == solvedBoardCol8[7] || solvedBoardCol8[6] == solvedBoardCol8[8]
+            || solvedBoardCol8[7] == solvedBoardCol8[8]
+            ) 
+            {
+                return false;
+            }
 
 
 
         let solvedBoardCol9:u8 = [solvedBoard.r1.c9, solvedBoard.r2.c9, solvedBoard.r3.c9, solvedBoard.r4.c9, solvedBoard.r5.c9, solvedBoard.r6.c9, solvedBoard.r7.c9, solvedBoard.r8.c9, solvedBoard.r9.c9];
                     //Check that the elements in this column are unique
-                for i: u8 in 0u8..8u8 {
-                    for j: u8 in 0u8..8u8 {
-                        if i != j {
-                            if solvedBoardCol9[i] == solvedBoardCol9[j] {
-                                return false;
-                            }
-                        }
-                    }
-                }
+            
+            if(solvedBoardCol9[0] == solvedBoardCol9[1] || solvedBoardCol9[0] == solvedBoardCol9[2] || solvedBoardCol9[0] == solvedBoardCol9[3] || solvedBoardCol9[0] == solvedBoardCol9[4] || solvedBoardCol9[0] == solvedBoardCol9[5] || solvedBoardCol9[0] == solvedBoardCol9[6] || solvedBoardCol9[0] == solvedBoardCol9[7] || solvedBoardCol9[0] == solvedBoardCol9[8]
+            || solvedBoardCol9[1] == solvedBoardCol9[2] || solvedBoardCol9[1] == solvedBoardCol9[3] || solvedBoardCol9[1] == solvedBoardCol9[4] || solvedBoardCol9[1] == solvedBoardCol9[5] || solvedBoardCol9[1] == solvedBoardCol9[6] || solvedBoardCol9[1] == solvedBoardCol9[7] || solvedBoardCol9[1] == solvedBoardCol9[8]
+            || solvedBoardCol9[2] == solvedBoardCol9[3] || solvedBoardCol9[2] == solvedBoardCol9[4] || solvedBoardCol9[2] == solvedBoardCol9[5] || solvedBoardCol9[2] == solvedBoardCol9[6] || solvedBoardCol9[2] == solvedBoardCol9[7] || solvedBoardCol9[2] == solvedBoardCol9[8]
+            || solvedBoardCol9[3] == solvedBoardCol9[4] || solvedBoardCol9[3] == solvedBoardCol9[5] || solvedBoardCol9[3] == solvedBoardCol9[6] || solvedBoardCol9[3] == solvedBoardCol9[7] || solvedBoardCol9[3] == solvedBoardCol9[8]
+            || solvedBoardCol9[4] == solvedBoardCol9[5] || solvedBoardCol9[4] == solvedBoardCol9[6] || solvedBoardCol9[4] == solvedBoardCol9[7] || solvedBoardCol9[4] == solvedBoardCol9[8]
+            || solvedBoardCol9[5] == solvedBoardCol9[6] || solvedBoardCol9[5] == solvedBoardCol9[7] || solvedBoardCol9[5] == solvedBoardCol9[8]
+            || solvedBoardCol9[6] == solvedBoardCol9[7] || solvedBoardCol9[6] == solvedBoardCol9[8]
+            || solvedBoardCol9[7] == solvedBoardCol9[8]
+            ) 
+            {
+                return false;
+            }
 
         
 
