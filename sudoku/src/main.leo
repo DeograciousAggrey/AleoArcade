@@ -218,7 +218,7 @@ program sudoku.leo {
             {
                 return false;
             }
-            
+
 
 
 
@@ -226,14 +226,17 @@ program sudoku.leo {
 
                 // check that the elements in this row are unique
 
-            for i: u8 in 0u8..8u8 {
-                for j: u8 in 0u8..8u8 {
-                    if i != j {
-                        if solvedBoardRow7[i] == solvedBoardRow7[j] {
-                            return false;
-                        }
-                    }
-                }
+            if(solvedBoardRow7[0] == solvedBoardRow7[1] || solvedBoardRow7[0] == solvedBoardRow7[2] || solvedBoardRow7[0] == solvedBoardRow7[3] || solvedBoardRow7[0] == solvedBoardRow7[4] || solvedBoardRow7[0] == solvedBoardRow7[5] || solvedBoardRow7[0] == solvedBoardRow7[6] || solvedBoardRow7[0] == solvedBoardRow7[7] || solvedBoardRow7[0] == solvedBoardRow7[8]
+            || solvedBoardRow7[1] == solvedBoardRow7[2] || solvedBoardRow7[1] == solvedBoardRow7[3] || solvedBoardRow7[1] == solvedBoardRow7[4] || solvedBoardRow7[1] == solvedBoardRow7[5] || solvedBoardRow7[1] == solvedBoardRow7[6] || solvedBoardRow7[1] == solvedBoardRow7[7] || solvedBoardRow7[1] == solvedBoardRow7[8]
+            || solvedBoardRow7[2] == solvedBoardRow7[3] || solvedBoardRow7[2] == solvedBoardRow7[4] || solvedBoardRow7[2] == solvedBoardRow7[5] || solvedBoardRow7[2] == solvedBoardRow7[6] || solvedBoardRow7[2] == solvedBoardRow7[7] || solvedBoardRow7[2] == solvedBoardRow7[8]
+            || solvedBoardRow7[3] == solvedBoardRow7[4] || solvedBoardRow7[3] == solvedBoardRow7[5] || solvedBoardRow7[3] == solvedBoardRow7[6] || solvedBoardRow7[3] == solvedBoardRow7[7] || solvedBoardRow7[3] == solvedBoardRow7[8]
+            || solvedBoardRow7[4] == solvedBoardRow7[5] || solvedBoardRow7[4] == solvedBoardRow7[6] || solvedBoardRow7[4] == solvedBoardRow7[7] || solvedBoardRow7[4] == solvedBoardRow7[8]
+            || solvedBoardRow7[5] == solvedBoardRow7[6] || solvedBoardRow7[5] == solvedBoardRow7[7] || solvedBoardRow7[5] == solvedBoardRow7[8]
+            || solvedBoardRow7[6] == solvedBoardRow7[7] || solvedBoardRow7[6] == solvedBoardRow7[8]
+            || solvedBoardRow7[7] == solvedBoardRow7[8]
+            ) 
+            {
+                return false;
             }
 
 
@@ -244,16 +247,18 @@ program sudoku.leo {
 
                 //Check that the elements in this row are unique
 
-            for i: u8 in 0u8..8u8 {
-                for j: u8 in 0u8..8u8 {
-                    if i != j {
-                        if solvedBoardRow8[i] == solvedBoardRow8[j] {
-                            return false;
-                        }
-                    }
-                }
+            if(solvedBoardRow8[0] == solvedBoardRow8[1] || solvedBoardRow8[0] == solvedBoardRow8[2] || solvedBoardRow8[0] == solvedBoardRow8[3] || solvedBoardRow8[0] == solvedBoardRow8[4] || solvedBoardRow8[0] == solvedBoardRow8[5] || solvedBoardRow8[0] == solvedBoardRow8[6] || solvedBoardRow8[0] == solvedBoardRow8[7] || solvedBoardRow8[0] == solvedBoardRow8[8]
+            || solvedBoardRow8[1] == solvedBoardRow8[2] || solvedBoardRow8[1] == solvedBoardRow8[3] || solvedBoardRow8[1] == solvedBoardRow8[4] || solvedBoardRow8[1] == solvedBoardRow8[5] || solvedBoardRow8[1] == solvedBoardRow8[6] || solvedBoardRow8[1] == solvedBoardRow8[7] || solvedBoardRow8[1] == solvedBoardRow8[8]
+            || solvedBoardRow8[2] == solvedBoardRow8[3] || solvedBoardRow8[2] == solvedBoardRow8[4] || solvedBoardRow8[2] == solvedBoardRow8[5] || solvedBoardRow8[2] == solvedBoardRow8[6] || solvedBoardRow8[2] == solvedBoardRow8[7] || solvedBoardRow8[2] == solvedBoardRow8[8]
+            || solvedBoardRow8[3] == solvedBoardRow8[4] || solvedBoardRow8[3] == solvedBoardRow8[5] || solvedBoardRow8[3] == solvedBoardRow8[6] || solvedBoardRow8[3] == solvedBoardRow8[7] || solvedBoardRow8[3] == solvedBoardRow8[8]
+            || solvedBoardRow8[4] == solvedBoardRow8[5] || solvedBoardRow8[4] == solvedBoardRow8[6] || solvedBoardRow8[4] == solvedBoardRow8[7] || solvedBoardRow8[4] == solvedBoardRow8[8]
+            || solvedBoardRow8[5] == solvedBoardRow8[6] || solvedBoardRow8[5] == solvedBoardRow8[7] || solvedBoardRow8[5] == solvedBoardRow8[8]
+            || solvedBoardRow8[6] == solvedBoardRow8[7] || solvedBoardRow8[6] == solvedBoardRow8[8]
+            || solvedBoardRow8[7] == solvedBoardRow8[8]
+            ) 
+            {
+                return false;
             }
-
 
 
 
@@ -261,17 +266,18 @@ program sudoku.leo {
 
                 //Check that the elements in this row are unique
 
-            for i: u8 in 0u8..8u8 {
-                for j: u8 in 0u8..8u8 {
-                    if i != j {
-                        if solvedBoardRow9[i] == solvedBoardRow9[j] {
-                            return false;
-                        }
-                    }
-                }
+            if(solvedBoardRow9[0] == solvedBoardRow9[1] || solvedBoardRow9[0] == solvedBoardRow9[2] || solvedBoardRow9[0] == solvedBoardRow9[3] || solvedBoardRow9[0] == solvedBoardRow9[4] || solvedBoardRow9[0] == solvedBoardRow9[5] || solvedBoardRow9[0] == solvedBoardRow9[6] || solvedBoardRow9[0] == solvedBoardRow9[7] || solvedBoardRow9[0] == solvedBoardRow9[8]
+            || solvedBoardRow9[1] == solvedBoardRow9[2] || solvedBoardRow9[1] == solvedBoardRow9[3] || solvedBoardRow9[1] == solvedBoardRow9[4] || solvedBoardRow9[1] == solvedBoardRow9[5] || solvedBoardRow9[1] == solvedBoardRow9[6] || solvedBoardRow9[1] == solvedBoardRow9[7] || solvedBoardRow9[1] == solvedBoardRow9[8]
+            || solvedBoardRow9[2] == solvedBoardRow9[3] || solvedBoardRow9[2] == solvedBoardRow9[4] || solvedBoardRow9[2] == solvedBoardRow9[5] || solvedBoardRow9[2] == solvedBoardRow9[6] || solvedBoardRow9[2] == solvedBoardRow9[7] || solvedBoardRow9[2] == solvedBoardRow9[8]
+            || solvedBoardRow9[3] == solvedBoardRow9[4] || solvedBoardRow9[3] == solvedBoardRow9[5] || solvedBoardRow9[3] == solvedBoardRow9[6] || solvedBoardRow9[3] == solvedBoardRow9[7] || solvedBoardRow9[3] == solvedBoardRow9[8]
+            || solvedBoardRow9[4] == solvedBoardRow9[5] || solvedBoardRow9[4] == solvedBoardRow9[6] || solvedBoardRow9[4] == solvedBoardRow9[7] || solvedBoardRow9[4] == solvedBoardRow9[8]
+            || solvedBoardRow9[5] == solvedBoardRow9[6] || solvedBoardRow9[5] == solvedBoardRow9[7] || solvedBoardRow9[5] == solvedBoardRow9[8]
+            || solvedBoardRow9[6] == solvedBoardRow9[7] || solvedBoardRow9[6] == solvedBoardRow9[8]
+            || solvedBoardRow9[7] == solvedBoardRow9[8]
+            ) 
+            {
+                return false;
             }
-
-
 
 
 
