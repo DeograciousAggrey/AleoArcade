@@ -437,6 +437,9 @@ program sudoku.leo {
                 return false;
             }
 
+        // Check that every nonet has unique numbers 1-9 and not repeated\
+
+        let 
         
 
 
